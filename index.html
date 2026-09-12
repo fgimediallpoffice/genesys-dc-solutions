@@ -1,0 +1,2326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genesys DC Solutions</title>
+  <meta name="description" content="Genesys DC Solutions - specialist engineering and project delivery consultancy for modern data centre infrastructure.">
+  <meta name="theme-color" content="#050507">
+  <meta property="og:title" content="Genesys DC Solutions">
+  <meta property="og:description" content="Critical infrastructure, delivered with precision.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800&display=swap">
+  <style>
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0}
+  img,video{max-width:100%;height:auto}
+  [hidden]{display:none!important}
+</style>
+  <style>
+  :root{
+    --void:#050507;
+    --maroon-deep:#2A040E;
+    --crimson:#8E0F1E;
+    --red:#E4102A;
+    --red-hot:#FF2D3D;
+    --ember:#FF7B7B;
+
+    --text:#F4EFF0;
+    --muted:#A99598;
+    --faint:#6E5B60;
+
+    --line:rgba(255,255,255,.08);
+    --line-hot:rgba(228,16,42,.28);
+    --glass:rgba(255,255,255,.034);
+    --glass-2:rgba(255,255,255,.062);
+
+    --ok:#34D399;
+    --warn:#F59E0B;
+
+    --t-xs:.6875rem;
+    --t-sm:.8125rem;
+    --t-base:.9375rem;
+    --t-md:1.0625rem;
+    --t-lg:1.3125rem;
+    --t-xl:clamp(1.7rem,2.8vw,2.2rem);
+    --t-2xl:clamp(2rem,4.2vw,3.1rem);
+    --t-hero:clamp(2.7rem,7vw,5.6rem);
+
+    --pad:clamp(1.2rem,2.2vw,1.75rem);
+    --gap:clamp(.7rem,1.1vw,1rem);
+    --r:18px;
+    --shell:1240px;
+    --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+    --logo:url("data:image/png;base64,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");
+    --font:"Inter","Inter var",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+
+    /* consistent elevation scale */
+    --e1:0 1px 0 rgba(255,255,255,.05) inset;
+    --e2:0 18px 44px -28px rgba(0,0,0,.9);
+    --e3:0 30px 70px -34px rgba(228,16,42,.5);
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--void);color:var(--text);font-family:var(--font);
+    font-size:var(--t-base);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{margin:0;font-weight:600;letter-spacing:-.035em;line-height:1.08;text-wrap:balance}
+  p{margin:0}
+  a{color:inherit;text-decoration:none}
+  ul{margin:0;padding:0;list-style:none}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  ::selection{background:var(--red);color:#fff}
+  :focus-visible{outline:2px solid var(--red-hot);outline-offset:3px;border-radius:4px}
+  html{scroll-behavior:smooth}
+  .shell{width:min(100% - 2.5rem,var(--shell));margin-inline:auto;position:relative;z-index:1}
+  svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.5;
+    stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+  /* ===== ambient bloom — gives the glass something to refract ===== */
+  .bloom{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .bloom i{position:absolute;display:block;border-radius:50%;filter:blur(90px);opacity:.55}
+  .bloom i:nth-child(1){width:52vw;height:52vw;left:-12vw;top:-14vw;
+    background:radial-gradient(circle,rgba(142,15,30,.85),transparent 68%)}
+  .bloom i:nth-child(2){width:44vw;height:44vw;right:-10vw;top:22vh;
+    background:radial-gradient(circle,rgba(228,16,42,.42),transparent 68%)}
+  .bloom i:nth-child(3){width:60vw;height:60vw;left:18vw;bottom:-26vw;
+    background:radial-gradient(circle,rgba(42,4,14,.95),transparent 70%)}
+
+  /* ===== brand mark (supplied artwork) ===== */
+  .logo{display:block;width:clamp(132px,13vw,158px);aspect-ratio:7.563;
+    background:var(--logo) left center/contain no-repeat}
+  .logo--sm{width:118px}
+  .logo-link{display:inline-flex;align-items:center;transition:opacity .25s}
+  .logo-link:hover{opacity:.78}
+
+  /* ===== nav ===== */
+  .nav{position:sticky;top:0;z-index:80;background:rgba(5,5,7,.62);
+    backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);
+    border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px;gap:1.5rem}
+  .nav-links{display:flex;gap:1.7rem;font-size:var(--t-sm);color:var(--muted)}
+  .nav-links a{position:relative;padding-block:.3rem;transition:color .22s}
+  .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--red);
+    transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+  .nav-links a:hover{color:var(--text)}
+  .nav-links a:hover::after{transform:scaleX(1)}
+  @media(max-width:1060px){.nav-links{display:none}}
+
+  /* ===== buttons ===== */
+  .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+    padding:.8rem 1.35rem;border-radius:100px;border:1px solid var(--line);
+    background:var(--glass-2);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    font-size:var(--t-sm);font-weight:550;cursor:pointer;overflow:hidden;will-change:transform;
+    transition:transform .4s cubic-bezier(.2,.8,.2,1),border-color .25s,box-shadow .25s,background .25s}
+  .btn>span{display:inline-flex;align-items:center;gap:.5rem;will-change:transform;
+    transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+  .btn:hover{border-color:rgba(255,45,61,.55);box-shadow:0 14px 40px -16px rgba(228,16,42,.8)}
+  .btn--primary{background:linear-gradient(180deg,var(--red-hot),var(--red) 55%,#B10D21);
+    border-color:rgba(255,123,123,.42);color:#fff;font-weight:600;
+    box-shadow:0 12px 34px -12px rgba(228,16,42,.85),inset 0 1px 0 rgba(255,255,255,.3)}
+  .btn--primary::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(105deg,transparent 36%,rgba(255,255,255,.4) 50%,transparent 64%);
+    transform:translateX(-120%);transition:transform .75s cubic-bezier(.2,.8,.2,1)}
+  .btn--primary:hover::after{transform:translateX(120%)}
+  .btn--ghost{background:rgba(255,255,255,.02)}
+
+  /* ===== labels ===== */
+  .label{font-size:var(--t-xs);font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--faint);display:flex;align-items:center;gap:.6rem}
+  .label::before{content:"";width:18px;height:1px;background:var(--red);flex:none;
+    box-shadow:0 0 8px rgba(228,16,42,.9)}
+  .label--plain{color:var(--ember)}
+  .label--plain::before{display:none}
+
+  /* ===== glass: gradient edge + specular inner light + micro-grain ===== */
+  @property --spot{syntax:'<number>';initial-value:0;inherits:false}
+
+  .glass{position:relative;border-radius:var(--r);border:0;overflow:hidden;--spot:0;
+    background:
+      radial-gradient(280px circle at var(--mx,50%) var(--my,-20%),
+        rgba(228,16,42,calc(.20 * var(--spot))), transparent 62%),
+      var(--grain),
+      linear-gradient(150deg,rgba(255,255,255,.085),rgba(255,255,255,.026) 44%,rgba(255,255,255,.05));
+    background-blend-mode:normal,overlay,normal;
+    backdrop-filter:blur(30px) saturate(185%) brightness(1.06);
+    -webkit-backdrop-filter:blur(30px) saturate(185%) brightness(1.06);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.24),
+      inset 0 -1px 0 rgba(0,0,0,.4),
+      inset 0 0 40px rgba(255,255,255,.035),
+      0 26px 64px -34px rgba(0,0,0,.95);
+    transition:--spot .4s ease,box-shadow .35s,transform .55s cubic-bezier(.2,.8,.2,1)}
+  /* 1px gradient edge — bright where light would catch it */
+  .glass::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;
+    background:linear-gradient(150deg,
+      rgba(255,255,255,.42) 0%, rgba(255,123,123,.22) 34%,
+      rgba(255,255,255,.05) 62%, rgba(228,16,42,.3) 100%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    mask-composite:exclude;pointer-events:none;z-index:2}
+  .glass:hover{--spot:1}
+
+  /* ===== hero ===== */
+  .hero{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero-in{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(2rem,4.5vw,4rem);
+    align-items:center;padding-block:clamp(3rem,6vw,5.5rem)}
+  @media(max-width:980px){.hero-in{grid-template-columns:1fr;padding-block:2.5rem 3rem}}
+  .hero-copy{display:grid;gap:1.6rem;max-width:36rem}
+  .hero h1{font-size:var(--t-hero);letter-spacing:-.045em;line-height:.96}
+  .hero h1 em{font-style:normal;color:var(--red-hot);text-shadow:0 0 44px rgba(228,16,42,.5)}
+  .hero-lede{color:var(--muted);font-size:var(--t-md);line-height:1.6;max-width:46ch}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:.65rem;align-items:center}
+
+  .globe-wrap{position:relative;width:100%;aspect-ratio:1;max-width:580px;justify-self:center}
+  #globe{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+  .globe-thesis{position:absolute;left:0;top:0;font-size:var(--t-xs);letter-spacing:.16em;
+    text-transform:uppercase;color:var(--faint)}
+  .globe-thesis b{color:var(--ember);font-weight:600}
+
+  /* telemetry panel floating on the globe */
+  .telemetry{position:absolute;left:0;bottom:0;width:min(100%,258px);padding:.95rem 1.05rem;
+    display:grid;gap:.55rem;z-index:2}
+  .telemetry .head{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+  .telemetry .head .label{white-space:nowrap;letter-spacing:.1em;font-size:.625rem}
+  .telemetry .st{font-size:.625rem;letter-spacing:.1em;text-transform:uppercase;font-weight:650;
+    display:inline-flex;align-items:center;gap:.4rem;white-space:nowrap}
+  .telemetry .st .dot{width:6px;height:6px;border-radius:50%;background:var(--ok);flex:none;
+    box-shadow:0 0 8px currentColor}
+  .st--ok{color:var(--ok)}
+  .st--reroute{color:var(--warn)}
+  .tel-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+    font-size:var(--t-sm);padding-top:.4rem;border-top:1px dashed rgba(255,255,255,.1)}
+  .tel-row .k{color:var(--faint);font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase}
+  .tel-row .v{color:#fff;font-variant-numeric:tabular-nums;font-weight:600}
+  .tel-row .v.green{color:var(--ok)}
+  @media(max-width:980px){
+    .globe-wrap{max-width:440px;order:-1}
+    .telemetry{position:static;width:100%;margin-top:1rem}
+  }
+
+  /* ===== ticker ===== */
+  .ticker{position:relative;z-index:1;border-bottom:1px solid var(--line);overflow:hidden;
+    background:rgba(0,0,0,.4);padding-block:.85rem;
+    mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+  .ticker-track{display:flex;gap:2.75rem;width:max-content;animation:slide 46s linear infinite}
+  .ticker:hover .ticker-track{animation-play-state:paused}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  .ticker span{display:inline-flex;align-items:center;gap:.55rem;white-space:nowrap;
+    font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:550}
+  .ticker span svg{color:var(--red);font-size:.95rem}
+
+  /* ===== sections ===== */
+  section{padding-block:clamp(3.5rem,6.5vw,6rem)}
+  .sec-head{display:grid;gap:.9rem;margin-bottom:clamp(1.8rem,3.4vw,2.75rem);max-width:66ch}
+  .sec-head h2{font-size:var(--t-2xl)}
+  .sec-head h2 em{font-style:normal;color:var(--red-hot)}
+  .sec-head p{color:var(--muted);font-size:var(--t-md);max-width:60ch}
+
+  /* ===== stats ===== */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:0}
+  .stat{padding:clamp(1.1rem,2.2vw,1.6rem);border-left:1px solid var(--line);display:grid;gap:.25rem}
+  .stat:first-child{border-left:0}
+  .stat b{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:600;letter-spacing:-.045em;line-height:1;
+    color:#fff;font-variant-numeric:tabular-nums;display:flex;align-items:baseline}
+  .stat b .suf{color:var(--red-hot);font-size:.52em}
+  .stat span{font-size:var(--t-xs);letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
+  .stat small{color:var(--muted);font-size:var(--t-sm)}
+  @media(max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(3){border-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
+  @media(max-width:460px){.stats{grid-template-columns:1fr}
+    .stat{border-left:0}.stat+.stat{border-top:1px solid var(--line)}}
+
+  /* ===== bento ===== */
+  .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap);perspective:1600px}
+  .cell{grid-column:span 4;padding:var(--pad);display:flex;flex-direction:column;gap:.75rem;
+    transform-style:preserve-3d;will-change:transform}
+  .cell:hover{box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(0,0,0,.4),
+    inset 0 0 40px rgba(255,255,255,.045),var(--e3)}
+  .cell h3{font-size:var(--t-md)}
+  .cell p{color:var(--muted)}
+  .cell--wide{grid-column:span 8}
+  .cell--half{grid-column:span 6}
+  .cell--tall{grid-row:span 2}
+  .cell--feature{border-color:var(--line-hot);
+    background:radial-gradient(95% 130% at 0% 0%,rgba(142,15,30,.4),transparent 62%),
+               linear-gradient(158deg,var(--glass-2),var(--glass) 60%)}
+  @media(max-width:960px){.cell,.cell--wide,.cell--half{grid-column:span 6}.cell--tall{grid-row:auto}}
+  @media(max-width:620px){.cell,.cell--wide,.cell--half{grid-column:span 12}}
+
+  .ico{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:1.1rem;
+    color:var(--red-hot);flex:none;
+    background:linear-gradient(160deg,rgba(228,16,42,.2),rgba(228,16,42,.04));
+    border:1px solid rgba(255,45,61,.26);box-shadow:inset 0 1px 0 rgba(255,255,255,.14);
+    transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+  .cell:hover .ico{transform:translateZ(38px)}
+
+  .spec{display:grid;margin-top:auto;padding-top:.6rem}
+  .spec li{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;
+    border-top:1px dashed rgba(255,255,255,.1);font-size:var(--t-sm)}
+  .spec .k{color:var(--faint)}
+  .spec .v{color:var(--muted);font-variant-numeric:tabular-nums;text-align:right}
+
+  /* ===== white space model ===== */
+  .hall-track{position:relative;height:235vh}
+  .hall-sticky{position:sticky;top:74px;display:grid;grid-template-columns:1fr 290px;
+    gap:var(--gap);align-items:start}
+  @media(max-width:980px){.hall-track{height:auto}
+    .hall-sticky{position:static;grid-template-columns:1fr}}
+  .stage{position:relative;aspect-ratio:16/10;
+    background:radial-gradient(70% 90% at 50% 115%,rgba(142,15,30,.3),rgba(5,5,7,.9))}
+  @media(max-width:980px){.stage{aspect-ratio:4/3}}
+  #hall-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y}
+  #hall-canvas:active{cursor:grabbing}
+  .stage-hint{position:absolute;left:1.1rem;bottom:1rem;display:flex;gap:1.25rem;
+    font-size:var(--t-xs);letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+  .stage-hint b{color:var(--ember);font-weight:600}
+  .readout{display:grid;gap:var(--gap);align-content:start}
+  .rcard{padding:var(--pad);display:grid;gap:.8rem}
+  .rcard h3{font-size:var(--t-md)}
+  .rcard p{color:var(--muted);font-size:var(--t-sm);line-height:1.55}
+  .phases{display:grid;gap:.3rem}
+  .phase{display:grid;grid-template-columns:auto 1fr auto;gap:.65rem;align-items:center;
+    padding:.5rem .6rem;border-radius:8px;border:1px solid transparent;text-align:left;
+    font-size:var(--t-sm);color:var(--faint);transition:all .3s}
+  .phase .dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.16);transition:all .3s}
+  .phase .kw{font-variant-numeric:tabular-nums;font-size:var(--t-xs)}
+  .phase:hover{color:var(--muted);border-color:var(--line-hot)}
+  .phase.live{color:var(--muted)}
+  .phase.live .dot{background:var(--red);box-shadow:0 0 9px rgba(228,16,42,.95)}
+  .phase.now{background:rgba(228,16,42,.12);border-color:rgba(255,45,61,.42);color:#fff}
+  .rstat{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+    padding-top:.6rem;border-top:1px dashed rgba(255,255,255,.12)}
+  .rstat .k{font-size:var(--t-xs);letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
+  .rstat .v{font-size:1.25rem;font-weight:600;letter-spacing:-.03em;color:#fff;font-variant-numeric:tabular-nums}
+  .fine{color:var(--faint);font-size:var(--t-xs);line-height:1.5}
+
+  /* ===== tabs ===== */
+  .tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.1rem}
+  .tab{padding:.58rem 1.05rem;border-radius:100px;border:1px solid var(--line);
+    font-size:var(--t-sm);font-weight:550;color:var(--muted);display:inline-flex;align-items:center;
+    gap:.5rem;transition:all .25s}
+  .tab:hover{color:var(--text);border-color:var(--line-hot)}
+  .tab[aria-selected="true"]{background:rgba(228,16,42,.14);border-color:rgba(255,45,61,.5);
+    color:#fff;box-shadow:0 0 26px -10px rgba(228,16,42,.9)}
+  .panel{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--gap)}
+  @media(max-width:820px){.panel{grid-template-columns:1fr}}
+  .panel[hidden]{display:none}
+  .pane{padding:var(--pad);display:grid;gap:.85rem;align-content:start}
+  .pane h3{font-size:var(--t-xl)}
+  .pane>p{color:var(--muted)}
+  .deliver{display:grid;gap:.55rem;margin-top:.25rem}
+  .deliver li{display:flex;gap:.65rem;color:var(--muted);font-size:var(--t-sm);line-height:1.5}
+  .deliver li svg{color:var(--red);margin-top:.3em;font-size:.8rem}
+
+  /* ===== console ===== */
+  .console{display:grid;grid-template-columns:1.28fr 1fr;gap:var(--gap)}
+  @media(max-width:900px){.console{grid-template-columns:1fr}}
+  .screen{padding:var(--pad);display:grid;gap:1rem;align-content:start;
+    background:linear-gradient(165deg,rgba(142,15,30,.18),rgba(5,5,7,.8))}
+  .screen::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;
+    background:repeating-linear-gradient(180deg,rgba(255,255,255,.026) 0 1px,transparent 1px 3px)}
+  .screen>*{position:relative;z-index:1}
+  .screen-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+  .chip{font-size:var(--t-xs);letter-spacing:.13em;text-transform:uppercase;font-weight:650;
+    padding:.28rem .6rem;border-radius:100px;border:1px solid currentColor;color:var(--ok)}
+  #trend{width:100%;height:128px;display:block}
+  .gauges{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+  @media(max-width:520px){.gauges{grid-template-columns:1fr}}
+  .gauge{padding:.85rem .95rem;border-radius:12px;border:1px solid var(--line);
+    background:rgba(255,255,255,.03);display:grid;gap:.5rem}
+  .gauge .top{display:flex;justify-content:space-between;align-items:baseline}
+  .gauge .name{font-size:var(--t-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:600}
+  .gauge .val{font-size:1.2rem;font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:#fff}
+  .bar{height:4px;border-radius:100px;background:rgba(255,255,255,.09);overflow:hidden}
+  .bar i{display:block;height:100%;width:0;border-radius:100px;
+    background:linear-gradient(90deg,var(--red),var(--red-hot));box-shadow:0 0 12px rgba(228,16,42,.75);
+    transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
+  .bar i.is-ok{background:linear-gradient(90deg,#0F766E,var(--ok));box-shadow:0 0 12px rgba(52,211,153,.6)}
+  .risk{display:grid}
+  .risk li{display:grid;grid-template-columns:auto 1fr auto;gap:.85rem;align-items:center;
+    padding:.7rem 0;border-top:1px dashed rgba(255,255,255,.1);font-size:var(--t-sm);color:var(--muted)}
+  .risk li:first-child{border-top:0}
+  .sev{width:3px;height:24px;border-radius:2px;background:var(--red)}
+  .sev--med{background:var(--warn)}
+  .sev--low{background:var(--ok)}
+  .risk .own{color:var(--faint);font-size:var(--t-xs);white-space:nowrap}
+
+  /* ===== dfma / cols ===== */
+  .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);perspective:1400px}
+  .cols--3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){.cols,.cols--3{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:540px){.cols,.cols--3{grid-template-columns:1fr}}
+  .col{padding:var(--pad);display:grid;gap:.85rem;align-content:start;
+    transform-style:preserve-3d;will-change:transform}
+  .col:hover{box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(0,0,0,.4),var(--e3)}
+  .col:hover .ico{transform:translateZ(32px)}
+  .col h3{font-size:var(--t-md)}
+  .col p{color:var(--muted);font-size:var(--t-sm);line-height:1.55}
+  .col ul{display:grid;gap:.45rem}
+  .col ul li{color:var(--muted);font-size:var(--t-sm);display:flex;gap:.6rem;align-items:flex-start}
+  .col ul li::before{content:"";flex:none;width:6px;height:1px;background:var(--red);margin-top:.66em}
+  .col .num{font-size:var(--t-xs);color:var(--ember);font-variant-numeric:tabular-nums;letter-spacing:.12em;font-weight:650}
+
+  /* ===== lifecycle ===== */
+  .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;margin-bottom:1.1rem}
+  @media(max-width:760px){.flow{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:420px){.flow{grid-template-columns:1fr}}
+  .step{position:relative;text-align:left;padding:1rem .9rem;border-radius:12px;
+    border:1px solid var(--line);background:rgba(255,255,255,.022);display:grid;gap:.3rem;transition:all .3s}
+  .step .n{font-size:var(--t-xs);font-weight:650;letter-spacing:.13em;color:var(--faint);
+    font-variant-numeric:tabular-nums;transition:color .3s}
+  .step .t{font-size:var(--t-sm);font-weight:600}
+  .step:hover{border-color:var(--line-hot);background:rgba(228,16,42,.06)}
+  .step[aria-selected="true"]{border-color:rgba(255,45,61,.55);background:rgba(228,16,42,.13);
+    box-shadow:0 0 30px -14px rgba(228,16,42,.95)}
+  .step[aria-selected="true"] .n{color:var(--red-hot)}
+  .stage-body{padding:var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+  @media(max-width:760px){.stage-body{grid-template-columns:1fr}}
+  .stage-body h3{font-size:var(--t-xl);margin-bottom:.55rem}
+  .stage-body p{color:var(--muted)}
+
+  /* ===== why ===== */
+  .values{display:grid;border-top:1px solid var(--line)}
+  .value{display:grid;grid-template-columns:auto .78fr 1.22fr;gap:1.4rem;align-items:center;
+    padding:1.3rem 0;border-bottom:1px solid var(--line);transition:background .3s,padding-left .35s}
+  .value:hover{background:rgba(228,16,42,.05);padding-left:.8rem}
+  .value h3{font-size:var(--t-md)}
+  .value p{color:var(--muted);font-size:var(--t-sm)}
+  @media(max-width:700px){.value{grid-template-columns:auto 1fr}.value p{grid-column:2}}
+
+  /* ===== cta ===== */
+  .cta{padding:clamp(2.2rem,5vw,4rem);display:grid;gap:1.3rem;justify-items:center;text-align:center;
+    border-color:var(--line-hot);
+    background:radial-gradient(75% 130% at 50% 0%,rgba(142,15,30,.5),transparent 64%),
+               linear-gradient(160deg,var(--glass-2),var(--glass))}
+  .cta::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:linear-gradient(rgba(228,16,42,.07) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(228,16,42,.07) 1px,transparent 1px);
+    background-size:54px 54px;
+    mask-image:radial-gradient(70% 80% at 50% 0%,#000,transparent 76%);
+    -webkit-mask-image:radial-gradient(70% 80% at 50% 0%,#000,transparent 76%)}
+  .cta>*{position:relative;z-index:1}
+  .cta h2{font-size:var(--t-2xl);max-width:20ch}
+  .cta p{color:var(--muted);max-width:52ch}
+  .cta-actions{display:flex;flex-wrap:wrap;gap:.65rem;justify-content:center}
+
+  footer{border-top:1px solid var(--line);padding-block:2.4rem 3.2rem;margin-top:clamp(3rem,6vw,5rem)}
+  .foot-in{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;justify-content:space-between;align-items:center;
+    color:var(--faint);font-size:var(--t-sm)}
+  .foot-in a:hover{color:var(--text)}
+
+  /* ===== belief / vision / values ===== */
+  .ethos{display:grid;grid-template-columns:1fr 1.06fr;gap:clamp(1.75rem,4vw,3.5rem);align-items:start}
+  @media(max-width:960px){.ethos{grid-template-columns:1fr}}
+  .belief{display:grid;gap:1.5rem}
+  .quote{position:relative;padding-left:2.4rem}
+  .quote::before{content:"\201C";position:absolute;left:0;top:-.32em;font-size:4.2rem;line-height:1;
+    color:var(--red);opacity:.5;font-weight:700}
+  .quote p{font-size:clamp(1.25rem,2.2vw,1.7rem);font-weight:500;letter-spacing:-.03em;
+    line-height:1.3;color:var(--text)}
+  .quote em{font-style:normal;color:var(--red-hot)}
+  .vision{padding:var(--pad);display:grid;gap:.75rem}
+  .vision p{color:var(--muted);font-size:var(--t-md);line-height:1.6}
+  .vision b{color:var(--text);font-weight:600}
+
+  .values-block{display:grid;gap:1rem}
+  .value-pills{display:flex;flex-wrap:wrap;gap:.65rem}
+  .vpill{position:relative;padding:.8rem 1.5rem;border-radius:100px;overflow:hidden;
+    font-size:var(--t-sm);font-weight:650;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);cursor:pointer;isolation:isolate;
+    background:var(--grain),linear-gradient(150deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+    backdrop-filter:blur(20px) saturate(170%);-webkit-backdrop-filter:blur(20px) saturate(170%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.2),inset 0 -1px 0 rgba(0,0,0,.4);
+    transition:color .35s,transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+  .vpill::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;
+    background:linear-gradient(150deg,rgba(255,255,255,.4),rgba(255,45,61,.35));
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    mask-composite:exclude;pointer-events:none;z-index:2}
+  /* the fill sweeps in from the left when a value is selected —
+     the value being applied across the work, not a decorative wipe */
+  .vpill i{position:absolute;inset:0;z-index:-1;transform:scaleX(0);transform-origin:left;
+    background:linear-gradient(90deg,var(--crimson),var(--red));
+    transition:transform .55s cubic-bezier(.16,.84,.24,1)}
+  .vpill:hover{color:var(--text);transform:translateY(-2px)}
+  .vpill[aria-selected="true"]{color:#fff;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 12px 34px -14px rgba(228,16,42,.9)}
+  .vpill[aria-selected="true"] i{transform:scaleX(1)}
+  .value-detail{padding:var(--pad);display:grid;gap:.6rem;min-height:172px;align-content:start}
+  .value-detail .vk{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ember);font-weight:650}
+  .value-detail h3{font-size:var(--t-lg)}
+  .value-detail p{color:var(--muted)}
+  .value-detail .prac{display:flex;gap:.6rem;align-items:flex-start;color:var(--muted);
+    font-size:var(--t-sm);padding-top:.7rem;border-top:1px dashed rgba(255,255,255,.12)}
+  .value-detail .prac svg{color:var(--red);margin-top:.3em;font-size:.8rem;flex:none}
+  .vd-anim{animation:vdIn .45s cubic-bezier(.2,.8,.2,1)}
+  @keyframes vdIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  /* ===== core areas pills ===== */
+  .areas{display:flex;flex-wrap:wrap;gap:.6rem}
+  .area{padding:.68rem 1.25rem;border-radius:100px;font-size:var(--t-sm);font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--muted);position:relative;
+    background:var(--grain),linear-gradient(150deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
+    backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.16),inset 0 -1px 0 rgba(0,0,0,.35);
+    transition:color .3s,transform .4s cubic-bezier(.2,.8,.2,1)}
+  .area::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;
+    background:linear-gradient(150deg,rgba(255,255,255,.3),rgba(228,16,42,.3));
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    mask-composite:exclude;pointer-events:none}
+  .area:hover{color:var(--text);transform:translateY(-2px)}
+
+  /* ===== mission: numbered spine ===== */
+  .mission{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(1.75rem,4vw,3.5rem);align-items:center}
+  @media(max-width:900px){.mission{grid-template-columns:1fr}}
+  .spine{position:relative;display:grid;gap:1.6rem;padding-left:3.4rem}
+  .spine::before{content:"";position:absolute;left:17px;top:14px;bottom:14px;width:1px;
+    background:rgba(255,255,255,.13)}
+  .spine::after{content:"";position:absolute;left:17px;top:14px;width:1px;height:0;
+    background:linear-gradient(180deg,var(--red-hot),var(--crimson));
+    box-shadow:0 0 10px rgba(228,16,42,.9);transition:height 1.4s cubic-bezier(.2,.8,.2,1)}
+  .spine.drawn::after{height:calc(100% - 28px)}
+  .snode{position:relative}
+  .snode .n{position:absolute;left:-3.4rem;top:-2px;width:35px;height:35px;border-radius:50%;
+    display:grid;place-items:center;font-size:var(--t-sm);font-weight:650;
+    color:var(--muted);font-variant-numeric:tabular-nums;background:var(--void);
+    border:1px solid rgba(255,255,255,.16);transition:all .45s;z-index:1}
+  .spine.drawn .snode:nth-child(1) .n{transition-delay:.25s}
+  .spine.drawn .snode:nth-child(2) .n{transition-delay:.65s}
+  .spine.drawn .snode:nth-child(3) .n{transition-delay:1.05s}
+  .spine.drawn .snode .n{color:#fff;border-color:rgba(255,45,61,.7);
+    box-shadow:0 0 22px -4px rgba(228,16,42,.9)}
+  .snode h3{font-size:var(--t-lg);font-weight:600;letter-spacing:-.03em}
+  .snode h3 em{font-style:normal;color:var(--red-hot)}
+  .snode p{color:var(--muted);font-size:var(--t-sm);margin-top:.3rem}
+
+  /* ===== photography: bleeds off one edge, as the deck does ===== */
+  /* both columns sit on the page grid — no bleed, so the photo edge lines up
+     with every other section boundary on the page */
+  .feature{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,3vw,2.5rem);
+    align-items:center}
+  .feature--flip{grid-template-columns:1fr 1fr}
+  @media(max-width:940px){.feature,.feature--flip{grid-template-columns:1fr}}
+  .feature-copy{display:grid;gap:1.25rem;align-content:start}
+
+  .shot{position:relative;margin:0;overflow:hidden;border-radius:var(--r);
+    aspect-ratio:16/10;background:#0A0608;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 30px 70px -36px rgba(0,0,0,.95)}
+  .shot img{width:100%;height:100%;object-fit:cover;display:block;
+    filter:saturate(.82) contrast(1.06) brightness(.86);
+    transform:scale(1.02);transition:transform 1.1s cubic-bezier(.2,.8,.2,1),filter .6s}
+  .feature:hover .shot img{transform:scale(1.055);filter:saturate(.92) contrast(1.06) brightness(.94)}
+  /* grade the photo into the page rather than pasting it on top */
+  .shot::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      linear-gradient(180deg,rgba(5,5,7,.34) 0%,transparent 34%,rgba(5,5,7,.72) 100%),
+      linear-gradient(90deg,rgba(42,4,14,.42),transparent 46%);}
+  .shot figcaption{position:absolute;left:1.1rem;right:1.1rem;bottom:1rem;z-index:2;
+    font-size:var(--t-xs);color:rgba(244,239,240,.82);line-height:1.5;letter-spacing:.01em}
+  .shot figcaption b{color:var(--ember);font-weight:650;letter-spacing:.12em;
+    text-transform:uppercase;display:block;margin-bottom:.25rem;font-size:.625rem}
+  /* until the photograph is dropped in, the slot reads as a labelled plate */
+  .shot.missing img{display:none}
+  .shot.missing{display:grid;place-items:center;
+    background:var(--grain),linear-gradient(150deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+  .shot.missing::before{content:attr(data-slot);position:relative;z-index:2;
+    font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--faint);
+    text-align:center;padding:0 1.5rem;line-height:1.7}
+
+
+  /* ===== DfMA comparison ===== */
+  .vs{width:100%;border-collapse:collapse;font-size:var(--t-sm)}
+  .vs th,.vs td{text-align:left;padding:1rem 1.1rem;vertical-align:top}
+  .vs thead th{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+    font-weight:650;color:var(--faint);border-bottom:1px solid var(--line)}
+  .vs thead th:last-child{color:var(--red-hot)}
+  .vs tbody tr{border-bottom:1px solid var(--line-soft,rgba(255,255,255,.06))}
+  .vs tbody tr:last-child{border-bottom:0}
+  .vs .feat{color:var(--text);font-weight:600}
+  .vs .feat small{display:block;color:var(--faint);font-weight:400;font-size:var(--t-xs);
+    margin-top:.2rem}
+  .vs .trad{color:var(--muted)}
+  .vs .gen{color:var(--text);position:relative;background:rgba(228,16,42,.07)}
+  .vs .gen::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--red)}
+  .vs-wrap{overflow-x:auto}
+  @media(max-width:680px){.vs{min-width:560px}}
+
+  /* ===== high-stakes delivery ===== */
+  .stakes{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+  @media(max-width:820px){.stakes{grid-template-columns:1fr}}
+  .stake{padding:var(--pad);display:grid;gap:.6rem;align-content:start}
+  .stake h3{font-size:var(--t-md)}
+  .stake p{color:var(--muted);font-size:var(--t-sm)}
+
+  /* ===== technological integration ===== */
+  .techint{display:grid;gap:var(--gap)}
+  .tline{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:center}
+  .tline .num{font-size:var(--t-md);font-weight:650;color:var(--faint);
+    font-variant-numeric:tabular-nums;letter-spacing:.06em;width:2.2rem;transition:color .4s}
+  .tline:hover .num{color:var(--red-hot)}
+  .tcard{padding:var(--pad);display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:center}
+  .tcard h3{font-size:var(--t-md)}
+  .tcard p{color:var(--muted);font-size:var(--t-sm)}
+  /* dashed feed line — the interface itself, animating only while data moves */
+  .feed{position:absolute;left:0;right:0;top:0;height:1px;overflow:hidden;pointer-events:none;z-index:1}
+  .feed i{display:block;height:100%;width:200%;
+    background:repeating-linear-gradient(90deg,rgba(255,45,61,.85) 0 7px,transparent 7px 18px);
+    animation:feed 2.6s linear infinite;opacity:0;transition:opacity .35s}
+  .tcard:hover .feed i{opacity:1}
+  @keyframes feed{to{transform:translateX(-50%)}}
+
+  /* ===== commitment ===== */
+  .commit{padding:clamp(1.75rem,3.6vw,2.75rem);display:grid;gap:1rem;max-width:78ch}
+  .commit p{color:var(--muted);font-size:var(--t-md);line-height:1.62}
+  .commit b{color:var(--text);font-weight:600}
+
+  /* ===== enquiry dialog ===== */
+  .scrim{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:1.25rem;
+    background:rgba(3,3,5,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    opacity:0;visibility:hidden;transition:opacity .32s ease,visibility .32s}
+  .scrim.open{opacity:1;visibility:visible}
+  .sheet{width:min(100%,660px);max-height:min(92vh,900px);overflow-y:auto;
+    padding:clamp(1.4rem,3vw,2.1rem);transform:translateY(14px) scale(.985);
+    transition:transform .4s cubic-bezier(.16,.84,.24,1)}
+  .scrim.open .sheet{transform:none}
+  .sheet-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;
+    margin-bottom:1.4rem}
+  .sheet-head h2{font-size:var(--t-xl)}
+  .sheet-head p{color:var(--muted);font-size:var(--t-sm);margin-top:.4rem;max-width:44ch}
+  .x{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex:none;
+    color:var(--muted);font-size:1.1rem;
+    background:rgba(255,255,255,.05);box-shadow:inset 0 1px 0 rgba(255,255,255,.16);
+    transition:color .25s,background .25s}
+  .x:hover{color:#fff;background:rgba(228,16,42,.22)}
+
+  .form{display:grid;gap:1rem}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  @media(max-width:560px){.row2{grid-template-columns:1fr}}
+  .field{display:grid;gap:.4rem}
+  .field label{font-size:var(--t-xs);letter-spacing:.13em;text-transform:uppercase;
+    color:var(--faint);font-weight:650}
+  .field label .req{color:var(--red-hot)}
+  .field input,.field select,.field textarea{
+    width:100%;min-height:46px;padding:.7rem .85rem;border-radius:10px;
+    font-family:var(--font);font-size:var(--t-base);color:var(--text);
+    background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);
+    transition:border-color .25s,box-shadow .25s,background .25s}
+  .field textarea{min-height:104px;resize:vertical;line-height:1.55}
+  .field select{appearance:none;cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23A99598' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right .9rem center;padding-right:2.4rem}
+  .field select option{background:#12090C;color:var(--text)}
+  .field input::placeholder,.field textarea::placeholder{color:var(--faint)}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;
+    border-color:rgba(255,45,61,.6);background:rgba(255,255,255,.06);
+    box-shadow:0 0 0 3px rgba(228,16,42,.16)}
+  .field .hint{font-size:var(--t-xs);color:var(--faint)}
+  .field .err{font-size:var(--t-xs);color:var(--red-hot);display:none;align-items:center;gap:.35rem}
+  .field.invalid input,.field.invalid select,.field.invalid textarea{border-color:rgba(255,45,61,.75)}
+  .field.invalid .err{display:flex}
+  .form-foot{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;justify-content:space-between;
+    padding-top:.4rem}
+  .form-foot .note{color:var(--faint);font-size:var(--t-xs);max-width:32ch}
+
+  .sent{display:none;gap:1.1rem;text-align:left}
+  .sent.on{display:grid}
+  .form.off{display:none}
+  .sent .tick{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+    color:var(--ok);font-size:1.3rem;background:rgba(52,211,153,.12);
+    box-shadow:inset 0 0 0 1px rgba(52,211,153,.35)}
+  .sent h3{font-size:var(--t-lg)}
+  .sent p{color:var(--muted);font-size:var(--t-sm)}
+  .preview{padding:.9rem 1rem;border-radius:10px;background:rgba(0,0,0,.4);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.09);
+    font-size:var(--t-xs);color:var(--muted);line-height:1.6;white-space:pre-wrap;
+    max-height:190px;overflow:auto;font-variant-numeric:tabular-nums}
+  .sent-actions{display:flex;flex-wrap:wrap;gap:.65rem;align-items:center}
+  .copied{color:var(--ok);font-size:var(--t-xs);opacity:0;transition:opacity .3s}
+  .copied.on{opacity:1}
+
+  /* ===== reveal ===== */
+  .js .reveal{opacity:0;transform:perspective(1100px) translate3d(0,20px,-50px) rotateX(5deg);
+    transform-origin:50% 100%}
+  .js .reveal.in{opacity:1;transform:none;
+    transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.16,.84,.24,1);
+    transition-delay:var(--d,0ms)}
+  @media(prefers-reduced-motion:reduce){
+    .js .reveal{opacity:1;transform:none}
+    .ticker-track{animation:none}
+    .btn,.btn>span,.cell,.col,.ico{transition:none!important}
+    .cell,.col{transform:none!important}
+    .hall-track{height:auto}
+    .hall-sticky{position:static}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 3.5-4 3 2.5L20 7"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-.5 8.5L19.5 10H13z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.5 5.2a3.2 3.2 0 0 1 0 5.9M17.4 14.6a6.2 6.2 0 0 1 3.8 5.4"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><path d="M9 3.8H6.5A1.5 1.5 0 0 0 5 5.3v14.2a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V5.3a1.5 1.5 0 0 0-1.5-1.5H15"/><rect x="9" y="2.2" width="6" height="3.4" rx="1"/><path d="M8.6 11h6.8M8.6 15h4.4"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2.8 9 4.6-9 4.6-9-4.6z"/><path d="m3 12.4 9 4.6 9-4.6M3 17.2l9 4.6 9-4.6"/></symbol>
+  <symbol id="i-helmet" viewBox="0 0 24 24"><path d="M3.5 16a8.5 8.5 0 0 1 17 0"/><path d="M2.5 16h19v2.5h-19z"/><path d="M9.5 8.3V4.6h5v3.7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.5 4.5 6v6c0 5 3.2 8.6 7.5 9.7 4.3-1.1 7.5-4.7 7.5-9.7V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 2.6 20.5 7v10L12 21.4 3.5 17V7z"/><path d="M3.5 7 12 11.6 20.5 7M12 11.6v9.8"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></symbol>
+  <symbol id="i-net" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2.2"/><circle cx="4.8" cy="18" r="2.2"/><circle cx="19.2" cy="18" r="2.2"/><path d="M10.6 6.4 6 15.9M13.4 6.4 18 15.9M7 18h10"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.8s6 6.4 6 10.4a6 6 0 0 1-12 0c0-4 6-10.4 6-10.4z"/></symbol>
+  <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.1"/><path d="M12 2.6v2.6M12 18.8v2.6M21.4 12h-2.6M5.2 12H2.6M18.6 5.4l-1.8 1.8M7.2 16.8l-1.8 1.8M18.6 18.6l-1.8-1.8M7.2 7.2 5.4 5.4"/></symbol>
+  <symbol id="i-rack" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="8" rx="1.5"/><rect x="3" y="13" width="18" height="8" rx="1.5"/><path d="M7 7h.01M7 17h.01M11 7h5M11 17h5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 4 5.8 4 9s-1.4 6.3-4 9c-2.6-2.7-4-5.8-4-9s1.4-6.3 4-9z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+</defs></svg>
+
+<div class="bloom" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<nav class="nav">
+  <div class="shell nav-in">
+    <a class="logo-link" href="#top" aria-label="Genesys DC Solutions — home"><span class="logo" role="img" aria-label="Genesys DC Solutions"></span></a>
+    <div class="nav-links">
+      <a href="#ethos">Values</a>
+      <a href="#who">Who we are</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#hall">White space</a>
+      <a href="#mep">MEP</a>
+      <a href="#controls">Controls</a>
+      <a href="#services">Services</a>
+    </div>
+    <a class="btn btn--primary magnetic" href="mailto:hello@genesysdcs.com"><span>Start a project <svg class="i"><use href="#i-arrow"/></svg></span></a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="shell hero-in">
+    <div class="hero-copy">
+      <p class="label reveal">Data centre engineering &amp; project delivery</p>
+      <h1 class="reveal" style="--d:60ms">Critical infrastructure, delivered with <em>precision</em>.</h1>
+      <p class="hero-lede reveal" style="--d:120ms">
+        A specialist consultancy for modern data centre programmes. We embed with developers,
+        EPC contractors and operators to give every project total visibility over budget,
+        schedule and resources — from design review to energisation.
+      </p>
+      <div class="hero-actions reveal" style="--d:180ms">
+        <a class="btn btn--primary magnetic" href="mailto:hello@genesysdcs.com"><span>Book a capability review</span></a>
+        <a class="btn btn--ghost magnetic" href="#capabilities"><span>What we do <svg class="i"><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+
+    <div class="globe-wrap reveal" style="--d:240ms">
+      <canvas id="globe" aria-label="Interactive resilience model: a global mesh of data centre regions. Hovering a region takes it offline and the traffic reroutes through surviving paths, while served load stays at 100 percent."></canvas>
+      <p class="globe-thesis">Take a region down. <b>The load still lands.</b></p>
+      <div class="telemetry glass">
+        <div class="head">
+          <span class="label label--plain" style="letter-spacing:.14em">Resilience model</span>
+          <span class="st st--ok" id="tel-status"><span class="dot"></span>Nominal</span>
+        </div>
+        <div class="tel-row"><span class="k">Regions online</span><span class="v"><span id="tel-online">8</span> / 8</span></div>
+        <div class="tel-row"><span class="k">Paths rerouted</span><span class="v" id="tel-reroute">0</span></div>
+        <div class="tel-row"><span class="k">Load served</span><span class="v green" id="tel-load">100%</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span><svg class="i"><use href="#i-bolt"/></svg>2N / N+1 topologies</span>
+    <span><svg class="i"><use href="#i-drop"/></svg>Chilled water &amp; CRAH</span>
+    <span><svg class="i"><use href="#i-layers"/></svg>Federated BIM</span>
+    <span><svg class="i"><use href="#i-shield"/></svg>L1–L5 commissioning</span>
+    <span><svg class="i"><use href="#i-chart"/></svg>Earned value management</span>
+    <span><svg class="i"><use href="#i-cube"/></svg>DfMA skids &amp; pods</span>
+    <span><svg class="i"><use href="#i-cog"/></svg>Concurrent maintainability</span>
+    <span><svg class="i"><use href="#i-net"/></svg>Interface management</span>
+    <span><svg class="i"><use href="#i-bolt"/></svg>2N / N+1 topologies</span>
+    <span><svg class="i"><use href="#i-drop"/></svg>Chilled water &amp; CRAH</span>
+    <span><svg class="i"><use href="#i-layers"/></svg>Federated BIM</span>
+    <span><svg class="i"><use href="#i-shield"/></svg>L1–L5 commissioning</span>
+    <span><svg class="i"><use href="#i-chart"/></svg>Earned value management</span>
+    <span><svg class="i"><use href="#i-cube"/></svg>DfMA skids &amp; pods</span>
+    <span><svg class="i"><use href="#i-cog"/></svg>Concurrent maintainability</span>
+    <span><svg class="i"><use href="#i-net"/></svg>Interface management</span>
+  </div>
+</div>
+
+<main>
+  <!-- ===== BELIEF · VISION · VALUES ===== -->
+  <section id="ethos" class="shell">
+    <div class="ethos">
+      <div class="belief">
+        <p class="label reveal">Our belief</p>
+        <div class="quote reveal" style="--d:60ms">
+          <p>Engineering and Project Management are <em>Art Forms</em>, that are best defined by
+             Simplicity and Precision.</p>
+        </div>
+        <div class="vision glass reveal" style="--d:120ms">
+          <p class="label label--plain">Our vision</p>
+          <p><b>Our vision</b> is to create the ultimate platform, for the most driven people
+             to converge and do their finest work at <b>Engineering the Future.</b></p>
+        </div>
+      </div>
+
+      <div class="values-block">
+        <p class="label reveal">Our values</p>
+        <p class="reveal" style="--d:60ms;color:var(--muted);max-width:46ch">
+          Four commitments that decide how we work. Select one to see what it means on a live programme.
+        </p>
+        <div class="value-pills reveal" style="--d:120ms" role="tablist" aria-label="Our values">
+          <button class="vpill" role="tab" aria-selected="true" data-v="0"><i></i>Courage</button>
+          <button class="vpill" role="tab" aria-selected="false" data-v="1"><i></i>Integrity</button>
+          <button class="vpill" role="tab" aria-selected="false" data-v="2"><i></i>Innovation</button>
+          <button class="vpill" role="tab" aria-selected="false" data-v="3"><i></i>Reliability</button>
+        </div>
+        <div class="value-detail glass reveal" style="--d:180ms" id="value-detail" role="tabpanel" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE ARE ===== -->
+  <section id="who" class="shell" style="padding-top:0">
+    <div class="sec-head">
+      <p class="label reveal">Who we are</p>
+      <h2 class="reveal" style="--d:60ms">A specialist engineering and project delivery consultancy for <em>modern data centre infrastructure</em>.</h2>
+      <p class="reveal" style="--d:120ms">
+        We support developers, EPC contractors, operators and stakeholders through every stage of the
+        project lifecycle — ensuring certainty in execution, technical excellence and operational efficiency.
+      </p>
+    </div>
+    <p class="label reveal" style="margin-bottom:1rem">Core areas</p>
+    <div class="areas reveal" style="--d:60ms">
+      <span class="area">Engineering Excellence</span>
+      <span class="area">Project Management</span>
+      <span class="area">Construction Support</span>
+      <span class="area">Operational Transformation</span>
+      <span class="area">Digital Project Integration</span>
+    </div>
+  </section>
+
+  <section class="shell" style="padding-bottom:0">
+    <div class="stats glass reveal">
+      <div class="stat"><b><span class="count" data-to="4">4</span></b><span>Service pillars</span><small>Engineering, PM, construction, digital</small></div>
+      <div class="stat"><b><span class="count" data-to="5">5</span></b><span>Core areas</span><small>Covering the full project lifecycle</small></div>
+      <div class="stat"><b><span class="count" data-to="6">6</span></b><span>DfMA advantages</span><small>Why we push work off-site</small></div>
+      <div class="stat"><b><span class="count" data-to="100">100</span><span class="suf">%</span></b><span>Programme visibility</span><small>Budget, schedule and resources</small></div>
+    </div>
+  </section>
+
+  <!-- ===== MISSION & PARTNERSHIPS ===== -->
+  <section id="mission" class="shell">
+    <div class="mission">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="label reveal">Strategic mission &amp; partnerships</p>
+        <h2 class="reveal" style="--d:60ms">We partner with contractors and developers who <em>believe in doing exceptional work</em>.</h2>
+        <p class="reveal" style="--d:120ms">
+          We work with top EPC contractors and data centre developers. Our focus is on building
+          phenomenal projects where The Process and The Precision are non-negotiable.
+        </p>
+      </div>
+      <div class="spine reveal" id="spine">
+        <div class="snode">
+          <span class="n">1</span>
+          <h3>Complex &amp; Critical <em>Infrastructure</em></h3>
+          <p>Programmes where an hour of downtime costs more than the consultancy fee for the year.</p>
+        </div>
+        <div class="snode">
+          <span class="n">2</span>
+          <h3>High-Performing <em>Technical Teams</em></h3>
+          <p>Squads assembled for the technical scale of the job, not the shape of an org chart.</p>
+        </div>
+        <div class="snode">
+          <span class="n">3</span>
+          <h3>Scalable <em>Execution Environments</em></h3>
+          <p>Processes and controls that survive the second campus, and the tenth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HIGH-STAKES DELIVERY ===== -->
+  <section id="stakes" class="shell">
+    <div class="feature">
+      <div class="feature-copy">
+        <div class="sec-head" style="margin-bottom:0">
+          <p class="label reveal">High-stakes delivery</p>
+          <h2 class="reveal" style="--d:60ms">Total visibility over <em>budget, schedule and resources</em>.</h2>
+        </div>
+        <div class="stakes" style="grid-template-columns:1fr">
+          <div class="stake glass reveal">
+            <span class="ico"><svg class="i"><use href="#i-net"/></svg></span>
+            <h3>We bridge operational gaps.</h3>
+            <p>Strategic planning integrated with on-the-ground execution excellence — so the plan
+               and the site agree with each other every week, not at handover.</p>
+          </div>
+          <div class="stake glass reveal" style="--d:80ms">
+            <span class="ico"><svg class="i"><use href="#i-shield"/></svg></span>
+            <h3>We manage what others defer.</h3>
+            <p>Complex, large-scale and time-critical projects delivered through robust risk mitigation,
+               with every exposure quantified and owned.</p>
+          </div>
+        </div>
+      </div>
+
+      <figure class="shot reveal" data-slot="Site photograph — images/site-aerial.jpg"
+              style="--d:120ms">
+        <img src="images/site-aerial.jpg" alt="Aerial view of a data centre campus under construction: structural steel frame with tower cranes, completed hall alongside, site cabins, laydown areas and a transmission pylon."
+             loading="lazy" decoding="async"
+             onerror="this.closest('.shot').classList.add('missing')">
+        <figcaption>
+          <b>On the ground</b>
+          Structural steel, MEP first fix and site logistics progressing in parallel — the point at
+          which schedule, procurement and trade interfaces all have to agree.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CAPABILITIES ===== -->
+  <section id="capabilities" class="shell">
+    <div class="sec-head">
+      <p class="label reveal">The Genesys — driving operational innovation</p>
+      <h2 class="reveal" style="--d:60ms">We bridge the gap between strategic planning and <em>on-the-ground execution</em>.</h2>
+      <p class="reveal" style="--d:120ms">
+        Three operational gaps sink data centre programmes: teams that aren't built for the load,
+        processes that were never written down, and a schedule nobody can see. We close all three.
+      </p>
+    </div>
+
+    <div class="bento">
+      <article class="cell cell--wide cell--feature glass reveal">
+        <span class="ico"><svg class="i"><use href="#i-chart"/></svg></span>
+        <p class="label label--plain">Project visibility</p>
+        <h3>One version of the truth across budget, schedule and resources.</h3>
+        <p>We instrument the programme so decisions move at the speed of the build — earned value against
+          the baseline, long-lead procurement tracked to the day, and a risk register that is worked
+          rather than archived. Delays surface as trends, not surprises.</p>
+        <ul class="spec">
+          <li><span class="k">Schedule baseline</span><span class="v">P6 / MSP · 4-week look-ahead</span></li>
+          <li><span class="k">Cost control</span><span class="v">EVM — CPI &amp; SPI, weekly</span></li>
+          <li><span class="k">Risk posture</span><span class="v">Quantified, owner-assigned</span></li>
+        </ul>
+      </article>
+
+      <article class="cell cell--tall glass reveal" style="--d:80ms">
+        <span class="ico"><svg class="i"><use href="#i-bolt"/></svg></span>
+        <p class="label label--plain">MEP engineering</p>
+        <h3>Authored and checked by engineers who've been on site.</h3>
+        <p>Designs and calculations are authored, independently evaluated and pressure-tested against
+          constructability — so mechanical, electrical and plumbing systems integrate into the building
+          lifecycle instead of colliding at second fix.</p>
+        <ul class="spec">
+          <li><span class="k">Electrical</span><span class="v">Load flow, SC &amp; arc-flash</span></li>
+          <li><span class="k">Mechanical</span><span class="v">CFD, chilled-water hydraulics</span></li>
+          <li><span class="k">Resilience</span><span class="v">Concurrent maintainability</span></li>
+        </ul>
+      </article>
+
+      <article class="cell glass reveal" style="--d:140ms">
+        <span class="ico"><svg class="i"><use href="#i-users"/></svg></span>
+        <p class="label label--plain">Team structuring</p>
+        <h3>Teams sized to the actual scope.</h3>
+        <p>Front-end and back-end squads designed around project demands and technical scale, not generic org charts.</p>
+      </article>
+
+      <article class="cell glass reveal" style="--d:200ms">
+        <span class="ico"><svg class="i"><use href="#i-clip"/></svg></span>
+        <p class="label label--plain">Standardisation</p>
+        <h3>Processes institutionalised, not improvised.</h3>
+        <p>Standard workflows across the lifecycle drive consistency and make the next campus repeatable.</p>
+      </article>
+
+      <article class="cell cell--half glass reveal">
+        <span class="ico"><svg class="i"><use href="#i-layers"/></svg></span>
+        <p class="label label--plain">Digital transformation</p>
+        <h3>Technology that removes errors, not dashboards that display them.</h3>
+        <p>Federated BIM and clash resolution, automated progress reporting, and interface diagnostics
+          that keep handovers between trade packages clean.</p>
+      </article>
+
+      <article class="cell cell--half glass reveal" style="--d:80ms">
+        <span class="ico"><svg class="i"><use href="#i-helmet"/></svg></span>
+        <p class="label label--plain">Workforce upskilling</p>
+        <h3>Mentoring for modern data centre demands.</h3>
+        <p>Capability is built deliberately — shadowing, structured design reviews and technical coaching
+          that leave the client's team stronger than we found it.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== WHITE SPACE ===== -->
+  <section id="hall" class="shell">
+    <div class="sec-head">
+      <p class="label reveal">Inside the build</p>
+      <h2 class="reveal" style="--d:60ms">A hall doesn't go live all at once. <em>It goes live in rows.</em></h2>
+      <p class="reveal" style="--d:120ms">
+        Each phase is a discrete handover — racks, busway, containment and controls proven together
+        before the next row is released. Drag to orbit; scroll to walk the sequence.
+      </p>
+    </div>
+
+    <div class="hall-track">
+      <div class="hall-sticky">
+        <div class="stage glass">
+          <canvas id="hall-canvas" aria-label="Wireframe model of a data hall. Rows of racks energise one phase at a time as you scroll; drag to orbit."></canvas>
+          <div class="stage-hint" aria-hidden="true"><span>Drag <b>orbit</b></span><span>Scroll <b>phase</b></span></div>
+        </div>
+
+        <div class="readout">
+          <div class="rcard glass">
+            <p class="label label--plain">Energisation sequence</p>
+            <h3 id="phase-title">Phase 1 — Row A</h3>
+            <p id="phase-note">First row released. Busway energised, containment closed, controls proven against the sequence of operation.</p>
+            <div class="phases" role="group" aria-label="Select an energisation phase">
+              <button class="phase" data-p="0"><span class="dot"></span><span>Row A — utility intake</span><span class="kw">96 kW</span></button>
+              <button class="phase" data-p="1"><span class="dot"></span><span>Row B — second UPS block</span><span class="kw">192 kW</span></button>
+              <button class="phase" data-p="2"><span class="dot"></span><span>Row C — cooling at design load</span><span class="kw">288 kW</span></button>
+              <button class="phase" data-p="3"><span class="dot"></span><span>Row D — redundancy proven</span><span class="kw">384 kW</span></button>
+              <button class="phase" data-p="4"><span class="dot"></span><span>Row E — full hall IST</span><span class="kw">480 kW</span></button>
+            </div>
+          </div>
+          <div class="rcard glass">
+            <div class="rstat" style="border-top:0;padding-top:0"><span class="k">Racks live</span><span class="v" id="r-racks">6</span></div>
+            <div class="rstat"><span class="k">IT load</span><span class="v" id="r-load">96 kW</span></div>
+            <div class="rstat"><span class="k">Topology</span><span class="v" style="font-size:1rem">2N</span></div>
+            <p class="fine">Illustrative hall — 30 racks at 16 kW across five rows.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEP ===== -->
+  <section id="mep" class="shell">
+    <div class="feature feature--flip" style="margin-bottom:clamp(2rem,4vw,3rem)">
+      <figure class="shot reveal" data-slot="Switchroom photograph — images/switchroom.jpg">
+        <img src="images/switchroom.jpg" alt="LV switchroom during commissioning: a lineup of switchgear panels labelled Incomer-1 and Bus Coupler, with overhead cable containment and basket tray running the length of the aisle."
+             loading="lazy" decoding="async"
+             onerror="this.closest('.shot').classList.add('missing')">
+        <figcaption>
+          <b>Where the design is proven</b>
+          Incomer, bus coupler and distribution boards at pre-functional check — the lineup that has
+          to match the single-line diagram, the protection study and the sequence of operation.
+        </figcaption>
+      </figure>
+
+      <div class="feature-copy">
+        <div class="sec-head" style="margin-bottom:0">
+          <p class="label reveal">MEP engineering excellence</p>
+          <h2 class="reveal" style="--d:60ms">Three disciplines. <em>One integrated model.</em></h2>
+          <p class="reveal" style="--d:120ms">
+            Minimising errors means catching them in the calculation, not the commissioning script.
+            We author the designs, check them independently, and stay on site while they are installed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="tabs" role="tablist" aria-label="MEP disciplines">
+        <button class="tab" role="tab" id="tab-e" aria-controls="p-e" aria-selected="true"><svg class="i"><use href="#i-bolt"/></svg>Electrical</button>
+        <button class="tab" role="tab" id="tab-m" aria-controls="p-m" aria-selected="false"><svg class="i"><use href="#i-drop"/></svg>Mechanical</button>
+        <button class="tab" role="tab" id="tab-c" aria-controls="p-c" aria-selected="false"><svg class="i"><use href="#i-cog"/></svg>Controls &amp; BMS</button>
+      </div>
+
+      <div class="panel" id="p-e" role="tabpanel" aria-labelledby="tab-e">
+        <div class="pane glass">
+          <h3>Power train, source to rack.</h3>
+          <p>From utility intake through HV/LV distribution, generators and UPS to busway and rack PDU — modelled, calculated and checked against the resilience concept the client actually sold to their tenant.</p>
+          <ul class="deliver">
+            <li><svg class="i"><use href="#i-check"/></svg>Load flow, short-circuit and protection coordination studies</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Arc-flash assessment and labelling strategy</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Generator sizing, step-load acceptance and fuel autonomy</li>
+            <li><svg class="i"><use href="#i-check"/></svg>UPS topology, battery autonomy and selective tripping</li>
+          </ul>
+        </div>
+        <div class="pane glass">
+          <p class="label label--plain">Typical design envelope</p>
+          <ul class="spec" style="margin-top:0">
+            <li><span class="k">Topology</span><span class="v">2N · N+1 · block redundant</span></li>
+            <li><span class="k">Distribution</span><span class="v">11 / 33 kV intake → 400 V</span></li>
+            <li><span class="k">Rack density</span><span class="v">8 – 40 kW per rack</span></li>
+            <li><span class="k">UPS autonomy</span><span class="v">5 – 10 min at full load</span></li>
+            <li><span class="k">Generator start</span><span class="v">&lt; 10 s to on-load</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel" id="p-m" role="tabpanel" aria-labelledby="tab-m" hidden>
+        <div class="pane glass">
+          <h3>Heat out, uptime in.</h3>
+          <p>Cooling is where density bites. We model airflow and hydraulics together so the white space performs at design day and at 20% load — the condition most halls actually run at.</p>
+          <ul class="deliver">
+            <li><svg class="i"><use href="#i-check"/></svg>CFD modelling of white space and containment strategy</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Chilled-water hydraulics, pressure drop and pump selection</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Chiller, CRAH and free-cooling hours analysis</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Liquid-cooling readiness for high-density halls</li>
+          </ul>
+        </div>
+        <div class="pane glass">
+          <p class="label label--plain">Typical design envelope</p>
+          <ul class="spec" style="margin-top:0">
+            <li><span class="k">Supply air</span><span class="v">22 – 27 °C (ASHRAE A1)</span></li>
+            <li><span class="k">Chilled water</span><span class="v">18 / 24 °C flow / return</span></li>
+            <li><span class="k">Design PUE</span><span class="v">1.20 – 1.35 annualised</span></li>
+            <li><span class="k">Ride-through</span><span class="v">60 – 120 s stored volume</span></li>
+            <li><span class="k">Containment</span><span class="v">Hot aisle, blanked</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel" id="p-c" role="tabpanel" aria-labelledby="tab-c" hidden>
+        <div class="pane glass">
+          <h3>The layer that proves the other two work.</h3>
+          <p>Controls are the most common cause of a failed integrated systems test. We review sequences of operation line by line and write the scripts that prove them before witness day.</p>
+          <ul class="deliver">
+            <li><svg class="i"><use href="#i-check"/></svg>Sequence of operation authoring and peer review</li>
+            <li><svg class="i"><use href="#i-check"/></svg>BMS / EPMS points list and alarm rationalisation</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Failure-mode scripting for integrated systems testing</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Handover data, O&amp;M structure and operator training</li>
+          </ul>
+        </div>
+        <div class="pane glass">
+          <p class="label label--plain">Commissioning ladder</p>
+          <ul class="spec" style="margin-top:0">
+            <li><span class="k">L1 — Factory</span><span class="v">FAT witness &amp; punch</span></li>
+            <li><span class="k">L2 — Delivery</span><span class="v">Site receipt &amp; static</span></li>
+            <li><span class="k">L3 — Component</span><span class="v">Pre-functional checks</span></li>
+            <li><span class="k">L4 — Functional</span><span class="v">System-level proving</span></li>
+            <li><span class="k">L5 — IST</span><span class="v">Load bank, black-start</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECHNOLOGICAL INTEGRATION ===== -->
+  <section id="techint" class="shell">
+    <div class="sec-head">
+      <p class="label reveal">Technological integration</p>
+      <h2 class="reveal" style="--d:60ms">Three layers that make the handovers <em>hold</em>.</h2>
+      <p class="reveal" style="--d:120ms">
+        Hover a layer to see its interface carrying data. Most programme failures happen in the
+        gap between two packages, not inside either one.
+      </p>
+    </div>
+    <div class="techint">
+      <div class="tline reveal">
+        <span class="num">01</span>
+        <div class="tcard glass">
+          <span class="feed" aria-hidden="true"><i></i></span>
+          <span class="ico"><svg class="i"><use href="#i-layers"/></svg></span>
+          <div>
+            <h3>Digital Transformation</h3>
+            <p>Driving technology adoption to eliminate errors and bridge operational gaps.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tline reveal" style="--d:80ms">
+        <span class="num">02</span>
+        <div class="tcard glass">
+          <span class="feed" aria-hidden="true"><i></i></span>
+          <span class="ico"><svg class="i"><use href="#i-net"/></svg></span>
+          <div>
+            <h3>Interface Integration</h3>
+            <p>Diagnosing critical project interfaces for smooth handovers and collaborative workflows.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tline reveal" style="--d:160ms">
+        <span class="num">03</span>
+        <div class="tcard glass">
+          <span class="feed" aria-hidden="true"><i></i></span>
+          <span class="ico"><svg class="i"><use href="#i-cog"/></svg></span>
+          <div>
+            <h3>Controls &amp; Governance</h3>
+            <p>Ensuring total visibility over resources, risks, and client satisfaction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTROLS ===== -->
+  <section id="controls" class="shell">
+    <div class="sec-head">
+      <p class="label reveal">Project controls</p>
+      <h2 class="reveal" style="--d:60ms">What <em>total visibility</em> actually looks like.</h2>
+      <p class="reveal" style="--d:120ms">
+        Every programme reports on the same spine, every week, to everyone. This is the format —
+        shown with illustrative figures from a sample fit-out, not a live client project.
+      </p>
+    </div>
+
+    <div class="console reveal">
+      <div class="screen glass">
+        <div class="screen-head">
+          <div>
+            <p class="label label--plain" style="margin-bottom:.3rem">Programme health · Week 24</p>
+            <h3 style="font-size:var(--t-md)">Hall 2 — electrical fit-out</h3>
+          </div>
+          <span class="chip">On baseline</span>
+        </div>
+        <canvas id="trend" aria-label="Sample chart: planned versus earned progress over twelve weeks, earned tracking slightly above plan."></canvas>
+        <div class="gauges">
+          <div class="gauge"><div class="top"><span class="name">SPI</span><span class="val">1.02</span></div><div class="bar"><i class="is-ok" data-w="76"></i></div></div>
+          <div class="gauge"><div class="top"><span class="name">CPI</span><span class="val">0.98</span></div><div class="bar"><i data-w="68"></i></div></div>
+          <div class="gauge"><div class="top"><span class="name">Design PUE</span><span class="val">1.28</span></div><div class="bar"><i class="is-ok" data-w="82"></i></div></div>
+        </div>
+        <p class="fine">Illustrative sample data, shown to demonstrate the reporting format.</p>
+      </div>
+
+      <div class="rcard glass">
+        <span class="ico"><svg class="i"><use href="#i-shield"/></svg></span>
+        <p class="label label--plain">Live risk register</p>
+        <h3>Owned, dated, and worked.</h3>
+        <ul class="risk">
+          <li><span class="sev" aria-hidden="true"></span><span>Switchgear delivery slipped 3 weeks against long-lead plan</span><span class="own">Procurement</span></li>
+          <li><span class="sev sev--med" aria-hidden="true"></span><span>Containment detail unresolved at structural interface</span><span class="own">Design</span></li>
+          <li><span class="sev sev--med" aria-hidden="true"></span><span>IST witness window clashes with client freeze period</span><span class="own">Commissioning</span></li>
+          <li><span class="sev sev--low" aria-hidden="true"></span><span>Second-fix labour ramp below planned curve</span><span class="own">Construction</span></li>
+        </ul>
+        <p class="fine" style="margin-top:auto">Severity set by impact × likelihood. Every line has a named owner and a next action date.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DFMA ===== -->
+  <section id="dfma" class="shell">
+    <div class="sec-head">
+      <p class="label reveal">DfMA</p>
+      <h2 class="reveal" style="--d:60ms">Why we push work <em>off-site</em>.</h2>
+      <p class="reveal" style="--d:120ms">
+        Fabrication and site preparation run simultaneously. That single change compresses the
+        critical path, and everything downstream of it gets more predictable.
+      </p>
+    </div>
+    <div class="cols cols--3">
+      <div class="col glass reveal"><span class="ico"><svg class="i"><use href="#i-clock"/></svg></span><h3>Faster deployment</h3><p>Parallel fabrication and site prep collapse the overall programme duration.</p></div>
+      <div class="col glass reveal" style="--d:60ms"><span class="ico"><svg class="i"><use href="#i-shield"/></svg></span><h3>Enhanced quality</h3><p>A controlled factory environment delivers consistent, repeatable precision.</p></div>
+      <div class="col glass reveal" style="--d:120ms"><span class="ico"><svg class="i"><use href="#i-helmet"/></svg></span><h3>Improved safety</h3><p>Fewer on-site activities means less congestion and lower exposure at height.</p></div>
+      <div class="col glass reveal" style="--d:180ms"><span class="ico"><svg class="i"><use href="#i-chart"/></svg></span><h3>Cost efficiency</h3><p>Predictable schedules and reduced waste produce accurate, defensible costs.</p></div>
+      <div class="col glass reveal" style="--d:240ms"><span class="ico"><svg class="i"><use href="#i-net"/></svg></span><h3>Optimised logistics</h3><p>Just-in-time delivery removes on-site storage and laydown disruption.</p></div>
+      <div class="col glass reveal" style="--d:300ms"><span class="ico"><svg class="i"><use href="#i-cube"/></svg></span><h3>Scalable solutions</h3><p>Modular skids and pods make expansion and future upgrades straightforward.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== DFMA COMPARISON ===== -->
+  <section id="dfma-vs" class="shell" style="padding-top:0">
+    <div class="sec-head">
+      <p class="label reveal">DfMA — methodology comparison</p>
+      <h2 class="reveal" style="--d:60ms">Traditional approach vs. <em>Genesys DfMA strategy</em>.</h2>
+    </div>
+    <div class="vs-wrap glass reveal" style="padding:.5rem">
+      <table class="vs">
+        <caption class="fine" style="text-align:left;padding:.75rem 1.1rem 0">
+          How the same four measures behave under each methodology.
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Traditional methodology</th>
+            <th scope="col">Genesys DfMA strategy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feat">Precision<small>Every detail matters.</small></td>
+            <td class="trad">Site-dependent, variable</td>
+            <td class="gen">Factory-standardised accuracy</td>
+          </tr>
+          <tr>
+            <td class="feat">Execution speed<small>Time is everything.</small></td>
+            <td class="trad">Sequential &amp; prone to delays</td>
+            <td class="gen">Accelerated via parallel assembly</td>
+          </tr>
+          <tr>
+            <td class="feat">Labour efficiency<small>People. Optimised.</small></td>
+            <td class="trad">High site-manpower requirement</td>
+            <td class="gen">Optimised specialist factory labour</td>
+          </tr>
+          <tr>
+            <td class="feat">Waste management<small>Build better. Waste less.</small></td>
+            <td class="trad">High material waste on-site</td>
+            <td class="gen">Minimised waste through pre-engineering</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== LIFECYCLE ===== -->
+  <section id="lifecycle" class="shell">
+    <div class="sec-head">
+      <p class="label reveal">Delivery lifecycle</p>
+      <h2 class="reveal" style="--d:60ms">Where we plug in — <em>and what changes</em>.</h2>
+    </div>
+    <div class="reveal">
+      <div class="flow" role="tablist" aria-label="Delivery lifecycle stages">
+        <button class="step" role="tab" aria-selected="true" data-stage="0"><span class="n">01</span><span class="t">Feasibility</span></button>
+        <button class="step" role="tab" aria-selected="false" data-stage="1"><span class="n">02</span><span class="t">Design</span></button>
+        <button class="step" role="tab" aria-selected="false" data-stage="2"><span class="n">03</span><span class="t">Procurement</span></button>
+        <button class="step" role="tab" aria-selected="false" data-stage="3"><span class="n">04</span><span class="t">Construction</span></button>
+        <button class="step" role="tab" aria-selected="false" data-stage="4"><span class="n">05</span><span class="t">Commissioning</span></button>
+      </div>
+      <div class="stage-body glass" id="stage-body" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="shell">
+    <div class="sec-head">
+      <p class="label reveal">Service portfolio</p>
+      <h2 class="reveal" style="--d:60ms">Integrated across the <em>whole delivery chain</em>.</h2>
+    </div>
+    <div class="cols">
+      <div class="col glass reveal"><span class="ico"><svg class="i"><use href="#i-rack"/></svg></span><h3>Engineering Services</h3>
+        <ul><li>Design review</li><li>Constructability analysis</li><li>Technical calculations</li><li>MEP coordination</li><li>Value engineering</li></ul></div>
+      <div class="col glass reveal" style="--d:80ms"><span class="ico"><svg class="i"><use href="#i-clip"/></svg></span><h3>Project Management</h3>
+        <ul><li>Planning &amp; scheduling</li><li>Cost management</li><li>Risk management</li><li>Progress monitoring</li><li>Stakeholder coordination</li></ul></div>
+      <div class="col glass reveal" style="--d:160ms"><span class="ico"><svg class="i"><use href="#i-helmet"/></svg></span><h3>Construction Support</h3>
+        <ul><li>Site management</li><li>Quality assurance</li><li>Vendor coordination</li><li>Project controls</li><li>Interface management</li></ul></div>
+      <div class="col glass reveal" style="--d:240ms"><span class="ico"><svg class="i"><use href="#i-layers"/></svg></span><h3>Digital Solutions</h3>
+        <ul><li>BIM integration</li><li>Dashboard development</li><li>Workflow automation</li><li>Reporting systems</li><li>Data governance</li></ul></div>
+    </div>
+  </section>
+
+  <!-- ===== FRAMEWORK ===== -->
+  <section id="framework" class="shell">
+    <div class="sec-head">
+      <p class="label reveal">Operational excellence framework</p>
+      <h2 class="reveal" style="--d:60ms">Four moves, <em>in order</em>.</h2>
+      <p class="reveal" style="--d:120ms">
+        Capability before process, process before governance, governance before improvement.
+        Skip a step and the one after it doesn't hold.
+      </p>
+    </div>
+    <div class="cols">
+      <div class="col glass reveal"><span class="num">01</span><h3>Workforce capability</h3><p>Build teams equipped for modern data centre delivery before loading them with process.</p></div>
+      <div class="col glass reveal" style="--d:80ms"><span class="num">02</span><h3>Process optimisation</h3><p>Standardise the workflows that drive efficiency, then write them down so they survive turnover.</p></div>
+      <div class="col glass reveal" style="--d:160ms"><span class="num">03</span><h3>Governance &amp; controls</h3><p>Maintain visibility across budget, schedule, quality and resources on a single reporting spine.</p></div>
+      <div class="col glass reveal" style="--d:240ms"><span class="num">04</span><h3>Continuous improvement</h3><p>Feed data and lessons learned back into the baseline so the next project starts further ahead.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== WHY ===== -->
+  <section id="why" class="shell">
+    <div class="sec-head">
+      <p class="label reveal">Why clients choose Genesys</p>
+      <h2 class="reveal" style="--d:60ms">The Process and The Precision are <em>non-negotiable</em>.</h2>
+    </div>
+    <div class="values reveal">
+      <div class="value"><span class="ico"><svg class="i"><use href="#i-clock"/></svg></span><h3>Faster project delivery</h3><p>Accelerated execution through proven methodologies and decision cycles that don't stall waiting for information.</p></div>
+      <div class="value"><span class="ico"><svg class="i"><use href="#i-chart"/></svg></span><h3>Enhanced visibility</h3><p>Complete oversight of schedule, budget and resources — reported the same way, every week, to everyone.</p></div>
+      <div class="value"><span class="ico"><svg class="i"><use href="#i-shield"/></svg></span><h3>Reduced risk</h3><p>Proactive identification and mitigation of project challenges on large-scale, time-critical programmes.</p></div>
+      <div class="value"><span class="ico"><svg class="i"><use href="#i-cog"/></svg></span><h3>Improved quality</h3><p>Engineering-driven execution standards, applied by people who author and check the calculations themselves.</p></div>
+      <div class="value"><span class="ico"><svg class="i"><use href="#i-users"/></svg></span><h3>Scalable expertise</h3><p>High-performing technical teams assembled for complex environments and released cleanly at handover.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== OUR COMMITMENT ===== -->
+  <section id="commitment" class="shell">
+    <div class="sec-head">
+      <p class="label reveal">Our commitment</p>
+    </div>
+    <div class="commit glass reveal">
+      <p>We believe great infrastructure is built through <b>clarity, precision, accountability,
+         and partnership.</b></p>
+      <p>Every project represents an opportunity to create lasting value for our clients and shape
+         the future of digital infrastructure.</p>
+    </div>
+  </section>
+
+  <section class="shell" style="padding-top:0">
+    <div class="cta glass reveal">
+      <p class="label label--plain">Let's engineer</p>
+      <h2>Great infrastructure is built through clarity and accountability.</h2>
+      <p>Every project is an opportunity to create lasting value and shape the future of digital
+         infrastructure. Tell us what you're building and where it's stuck.</p>
+      <div class="cta-actions">
+        <a class="btn btn--primary magnetic" href="mailto:hello@genesysdcs.com"><span>hello@genesysdcs.com <svg class="i"><use href="#i-arrow"/></svg></span></a>
+        <a class="btn btn--ghost magnetic" href="https://www.genesysdcs.com"><span><svg class="i"><use href="#i-globe"/></svg> www.genesysdcs.com</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== ENQUIRY DIALOG ===== -->
+<div class="scrim" id="scrim" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+  <div class="sheet glass" id="sheet">
+    <div class="sheet-head">
+      <div>
+        <p class="label label--plain" style="margin-bottom:.5rem">Start a project</p>
+        <h2 id="sheet-title">Tell us what you're building.</h2>
+        <p id="sheet-sub">A few details so the right engineer answers you, not a mailbox.</p>
+      </div>
+      <button class="x" id="sheet-close" aria-label="Close">&#10005;</button>
+    </div>
+
+    <form class="form" id="enquiry" novalidate>
+      <div class="row2">
+        <div class="field">
+          <label for="f-name">Name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required
+                 placeholder="Jordan Ellis">
+          <span class="err" id="e-name">Enter your name so we know who to reply to.</span>
+        </div>
+        <div class="field">
+          <label for="f-company">Company <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-company" name="company" type="text" autocomplete="organization" required
+                 placeholder="Northgate Developments">
+          <span class="err" id="e-company">Enter the company this project sits under.</span>
+        </div>
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label for="f-email">Work email <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required
+                 placeholder="jordan@northgate.com">
+          <span class="err" id="e-email">Enter a valid email address, e.g. name@company.com</span>
+        </div>
+        <div class="field">
+          <label for="f-role">Role</label>
+          <input id="f-role" name="role" type="text" autocomplete="organization-title"
+                 placeholder="Programme Director">
+        </div>
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label for="f-type">Enquiry</label>
+          <select id="f-type" name="type">
+            <option>New build</option>
+            <option>Fit-out</option>
+            <option>Expansion — additional halls</option>
+            <option>Retrofit or upgrade</option>
+            <option>Capability review</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-stage">Current stage</label>
+          <select id="f-stage" name="stage">
+            <option>Feasibility</option>
+            <option>Design</option>
+            <option>Procurement</option>
+            <option>Construction</option>
+            <option>Commissioning</option>
+            <option>Not started yet</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f-load">IT load</label>
+        <input id="f-load" name="load" type="text" placeholder="e.g. 2 MW across four halls">
+        <span class="hint">Approximate is fine — it tells us the scale of team to put on it.</span>
+      </div>
+
+      <div class="field">
+        <label for="f-msg">What do you need, and where is it stuck? <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="f-msg" name="message" required
+          placeholder="Switchgear is 6 weeks late and the IST window won't move. We need the schedule re-baselined and a view on what else it pushes."></textarea>
+        <span class="err" id="e-msg">Tell us briefly what you need — a sentence or two is enough.</span>
+      </div>
+
+      <div class="form-foot">
+        <p class="note">Opens in your email app, addressed to hello@genesysdcs.com. Nothing is sent until you press send.</p>
+        <button type="submit" class="btn btn--primary magnetic">
+          <span>Compose enquiry <svg class="i"><use href="#i-arrow"/></svg></span>
+        </button>
+      </div>
+      <p class="err" id="e-form" role="alert" style="display:none;justify-content:flex-start">
+        Some details are missing — the highlighted fields need an answer.
+      </p>
+    </form>
+
+    <div class="sent" id="sent">
+      <span class="tick"><svg class="i"><use href="#i-check"/></svg></span>
+      <div>
+        <h3>Your enquiry is ready to send.</h3>
+        <p>Open it in your email app, or copy it into webmail. It's addressed to
+           <strong style="color:var(--text)">hello@genesysdcs.com</strong>.</p>
+      </div>
+      <pre class="preview" id="preview" aria-label="Composed enquiry"></pre>
+      <div class="sent-actions">
+        <a class="btn btn--primary magnetic" id="mail-link" href="#"><span>Open in email app</span></a>
+        <button class="btn btn--ghost magnetic" id="copy-btn"><span>Copy enquiry</span></button>
+        <span class="copied" id="copied" role="status">Copied</span>
+      </div>
+      <button class="btn btn--ghost" id="edit-back" style="justify-self:start"><span>Back to the form</span></button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="shell foot-in">
+    <span class="logo logo--sm" role="img" aria-label="Genesys DC Solutions"></span>
+    <span>Engineering · Project Management · Construction Support · Digital</span>
+    <a href="mailto:hello@genesysdcs.com">hello@genesysdcs.com</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hoverable = matchMedia('(hover: hover)').matches;
+
+  /* ---------- reveals ---------- */
+  if (!reduce && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -7% 0px', threshold: 0.05 });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      if (el.getBoundingClientRect().top < innerHeight * 0.95) {
+        requestAnimationFrame(function () { el.classList.add('in'); });
+      } else { io.observe(el); }
+    });
+
+    /* Safety net: an instant jump (a #hash deep link, or scrollTo with
+       behavior:'instant') can land on content the observer never saw, leaving
+       it stuck invisible. Sweep anything already on screen. */
+    var sweeping = false;
+    function sweep() {
+      sweeping = false;
+      var left = document.querySelectorAll('.reveal:not(.in)');
+      for (var i = 0; i < left.length; i++) {
+        var r = left[i].getBoundingClientRect();
+        if (r.top < innerHeight && r.bottom > 0) {
+          left[i].classList.add('in');
+          io.unobserve(left[i]);
+        }
+      }
+      if (!document.querySelector('.reveal:not(.in)')) {
+        removeEventListener('scroll', queue);
+        removeEventListener('hashchange', queue);
+      }
+    }
+    function queue() {
+      if (sweeping) return;
+      sweeping = true;
+      requestAnimationFrame(sweep);
+    }
+    addEventListener('scroll', queue, { passive: true });
+    addEventListener('hashchange', queue);
+    addEventListener('load', queue);
+    setTimeout(queue, 300);
+  }
+
+  /* ---------- magnetic buttons ---------- */
+  if (!reduce && hoverable) {
+    document.querySelectorAll('.magnetic').forEach(function (b) {
+      var lab = b.querySelector('span');
+      b.addEventListener('pointermove', function (e) {
+        var r = b.getBoundingClientRect();
+        var x = Math.max(-60, Math.min(60, e.clientX - (r.left + r.width / 2))) * 0.26;
+        var y = Math.max(-60, Math.min(60, e.clientY - (r.top + r.height / 2))) * 0.26;
+        b.style.transition = 'transform .13s linear, border-color .25s, box-shadow .25s';
+        b.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0)';
+        if (lab) lab.style.transform = 'translate3d(' + (x * .2).toFixed(1) + 'px,' + (y * .2).toFixed(1) + 'px,0)';
+      });
+      b.addEventListener('pointerleave', function () {
+        b.style.transition = ''; b.style.transform = '';
+        if (lab) lab.style.transform = '';
+      });
+    });
+  }
+
+  /* ---------- specular highlight tracks the cursor across every glass panel ---------- */
+  if (hoverable) {
+    document.querySelectorAll('.glass').forEach(function (g) {
+      g.addEventListener('pointermove', function (e) {
+        var r = g.getBoundingClientRect();
+        g.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        g.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+  }
+
+  /* ---------- card tilt ---------- */
+  if (hoverable) {
+    document.querySelectorAll('.cell, .col').forEach(function (c) {
+      var raf = 0, rx = 0, ry = 0;
+      c.addEventListener('pointermove', function (e) {
+        if (reduce) return;
+        var r = c.getBoundingClientRect();
+        ry = ((e.clientX - r.left) / r.width - 0.5) * 8;
+        rx = (0.5 - (e.clientY - r.top) / r.height) * 5.5;
+        if (raf) return;
+        raf = requestAnimationFrame(function () {
+          raf = 0;
+          c.style.transition = 'border-color .35s, box-shadow .35s';
+          c.style.transform = 'perspective(1600px) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg) translateZ(10px)';
+        });
+      });
+      c.addEventListener('pointerleave', function () { c.style.transition = ''; c.style.transform = ''; });
+    });
+  }
+
+  /* ---------- counters ---------- */
+  var counters = document.querySelectorAll('.count');
+  if (counters.length && 'IntersectionObserver' in window) {
+    var cio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target, to = +el.dataset.to, st = performance.now();
+        if (reduce) { el.textContent = to; cio.unobserve(el); return; }
+        (function tick(now) {
+          var k = Math.min(1, (now - st) / 1100);
+          el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3)));
+          if (k < 1) requestAnimationFrame(tick);
+        })(st);
+        cio.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (c) { cio.observe(c); });
+  }
+
+  /* =======================================================================
+     HERO — RESILIENCE MODEL
+     A mesh of data centre regions. The cursor is an outage: hover a region
+     and it drops, its paths die, and traffic reroutes through survivors.
+     Served load never falls — that is the whole argument for 2N design.
+     ======================================================================= */
+  (function globe() {
+    var cv = document.getElementById('globe'); if (!cv) return;
+    var ctx = cv.getContext('2d');
+    var elOnline = document.getElementById('tel-online');
+    var elReroute = document.getElementById('tel-reroute');
+    var elLoad = document.getElementById('tel-load');
+    var elStatus = document.getElementById('tel-status');
+
+    var W = 0, H = 0, R = 0, dpr = Math.min(devicePixelRatio || 1, 2);
+    var N = 1150, pts = [], rot = 0, tilt = -0.36, t = 0;
+    var mx = -1e4, my = -1e4, hasPointer = false;
+
+    /* even point coverage — Fibonacci lattice */
+    var gold = Math.PI * (3 - Math.sqrt(5));
+    for (var i = 0; i < N; i++) {
+      var yy = 1 - (i / (N - 1)) * 2, rr = Math.sqrt(Math.max(0, 1 - yy * yy)), th = gold * i;
+      pts.push({ x: Math.cos(th) * rr, y: yy, z: Math.sin(th) * rr, d: 0, v: 0 });
+    }
+
+    /* eight regions, availability-zone naming (illustrative, not office locations) */
+    function ll(lat, lon) {
+      var a = lat * Math.PI / 180, o = lon * Math.PI / 180;
+      return { x: Math.cos(a) * Math.cos(o), y: Math.sin(a), z: Math.cos(a) * Math.sin(o) };
+    }
+    var NODES = [
+      { id: 'AMER-1', p: ll(39, -98) }, { id: 'LATAM-1', p: ll(-14, -50) },
+      { id: 'EMEA-1', p: ll(52, 5) },   { id: 'EMEA-2', p: ll(51, -1) },
+      { id: 'MENA-1', p: ll(25, 46) },  { id: 'APAC-1', p: ll(1, 104) },
+      { id: 'APAC-2', p: ll(35, 139) }, { id: 'APAC-3', p: ll(-33, 151) }
+    ];
+    /* mesh: every region has at least two independent paths */
+    var LINKS = [[0,2],[0,1],[0,6],[2,3],[3,4],[4,5],[5,6],[5,7],[2,4],[6,7]];
+
+    var down = {};           /* region index → true while offline */
+    var lastOnline = 8, lastReroute = 0;
+
+    function size() {
+      var r = cv.getBoundingClientRect();
+      W = r.width; H = r.height; R = Math.min(W, H) * 0.385;
+      cv.width = W * dpr; cv.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function rotate(p) {
+      var c = Math.cos(rot), s = Math.sin(rot);
+      var x = p.x * c - p.z * s, z = p.x * s + p.z * c;
+      var ct = Math.cos(tilt), st = Math.sin(tilt);
+      return [x, p.y * ct - z * st, p.y * st + z * ct];
+    }
+    function screenOf(v, rr) {
+      var k = 1.9 / (1.9 - v[2] * 0.55);
+      return [W / 2 + v[0] * rr * k, H / 2 - v[1] * rr * k, k];
+    }
+    function curve(a, b) {
+      var mxp = (a[0] + b[0]) / 2, myp = (a[1] + b[1]) / 2;
+      var lift = 0.17 * Math.hypot(b[0] - a[0], b[1] - a[1]);
+      return [mxp + (mxp - W / 2) * 0.16, myp + (myp - H / 2) * 0.16 - lift];
+    }
+    function ptOnCurve(a, c, b, u) {
+      var m = 1 - u;
+      return [m * m * a[0] + 2 * m * u * c[0] + u * u * b[0],
+              m * m * a[1] + 2 * m * u * c[1] + u * u * b[1]];
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      var i, v, s;
+
+      /* --- regions: project, then test the cursor against them --- */
+      var np = [];
+      for (i = 0; i < NODES.length; i++) {
+        v = rotate(NODES[i].p); s = screenOf(v, R);
+        np.push({ x: s[0], y: s[1], z: v[2], k: s[2] });
+      }
+      var newDown = {};
+      if (hasPointer) {
+        for (i = 0; i < np.length; i++) {
+          if (np[i].z < -0.1) continue;                    /* far side is not hoverable */
+          if (Math.hypot(np[i].x - mx, np[i].y - my) < R * 0.30) newDown[i] = true;
+        }
+      }
+      down = newDown;
+
+      /* --- point field: scatter around the cursor, spring back --- */
+      var proj = [];
+      for (i = 0; i < N; i++) {
+        var p = pts[i];
+        v = rotate(p); s = screenOf(v, R);
+        var target = 0;
+        if (hasPointer && v[2] > -0.25) {
+          var dist = Math.hypot(s[0] - mx, s[1] - my), reach = R * 0.40;
+          if (dist < reach) { var f = 1 - dist / reach; target = f * f * f * R * 0.32; }
+        }
+        p.v += (target - p.d) * 0.14; p.v *= 0.72; p.d += p.v;
+        s = screenOf(v, R + p.d);
+        proj.push([s[0], s[1], v[2], p.d, s[2]]);
+      }
+
+      /* --- active links, and the reroutes that replace failed ones --- */
+      var active = [], failed = 0, l, a, b;
+      for (i = 0; i < LINKS.length; i++) {
+        l = LINKS[i];
+        if (down[l[0]] || down[l[1]]) { failed++; continue; }
+        active.push({ a: l[0], b: l[1], re: false, seed: i });
+      }
+      /* traffic routes around a downed region via its surviving neighbours */
+      var reroutes = 0;
+      Object.keys(down).forEach(function (k) {
+        k = +k;
+        var nb = [];
+        LINKS.forEach(function (L) {
+          if (L[0] === k && !down[L[1]]) nb.push(L[1]);
+          if (L[1] === k && !down[L[0]]) nb.push(L[0]);
+        });
+        for (var j = 0; j + 1 < nb.length; j++) {
+          active.push({ a: nb[j], b: nb[j + 1], re: true, seed: 100 + j + k * 7 });
+          reroutes++;
+        }
+      });
+
+      /* --- draw links + travelling pulses --- */
+      for (i = 0; i < active.length; i++) {
+        a = np[active[i].a]; b = np[active[i].b];
+        if (a.z < -0.25 && b.z < -0.25) continue;
+        var c = curve([a.x, a.y], [b.x, b.y]);
+        var vis = Math.max(0.08, Math.min(1, (Math.max(a.z, b.z) + 0.3) / 1.3));
+
+        ctx.save();
+        if (active[i].re) {
+          ctx.strokeStyle = 'rgba(255,123,123,' + (0.55 * vis).toFixed(3) + ')';
+          ctx.lineWidth = 1.3;
+          ctx.shadowColor = 'rgba(228,16,42,.9)'; ctx.shadowBlur = 8;
+        } else {
+          ctx.strokeStyle = 'rgba(228,16,42,' + (0.5 * vis).toFixed(3) + ')';
+          ctx.lineWidth = 1;
+          ctx.shadowColor = 'rgba(228,16,42,.6)'; ctx.shadowBlur = 5;
+        }
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.quadraticCurveTo(c[0], c[1], b.x, b.y);
+        ctx.stroke();
+        ctx.restore();
+
+        if (!reduce) {
+          var u = ((t * 0.26) + (active[i].seed * 0.137)) % 1;
+          var q = ptOnCurve([a.x, a.y], c, [b.x, b.y], u);
+          ctx.fillStyle = 'rgba(255,' + (active[i].re ? 200 : 140) + ',150,' + (0.85 * vis).toFixed(3) + ')';
+          ctx.beginPath(); ctx.arc(q[0], q[1], 1.9, 0, 6.283); ctx.fill();
+        }
+      }
+
+      /* --- the point field, far side first --- */
+      var order = proj.map(function (_, ix) { return ix; })
+        .sort(function (m, n) { return proj[m][2] - proj[n][2]; });
+      for (i = 0; i < order.length; i++) {
+        var q2 = proj[order[i]];
+        var depth = (q2[2] + 1) / 2;
+        var alpha = 0.06 + depth * 0.6;
+        var rad = (0.5 + depth * 0.92) * q2[4];
+        var push = Math.min(1, q2[3] / (R * 0.26));
+        if (push > 0.06) {
+          ctx.fillStyle = 'rgba(255,' + Math.round(150 - 100 * push) + ',' +
+            Math.round(158 - 100 * push) + ',' + Math.min(0.92, alpha + push * 0.3).toFixed(3) + ')';
+          rad *= 1 + push * 0.55;
+        } else {
+          ctx.fillStyle = 'rgba(232,228,230,' + alpha.toFixed(3) + ')';
+        }
+        ctx.beginPath(); ctx.arc(q2[0], q2[1], rad, 0, 6.283); ctx.fill();
+      }
+
+      /* --- region markers + labels --- */
+      ctx.font = '600 9px Inter, system-ui, sans-serif';
+      ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+      for (i = 0; i < np.length; i++) {
+        var n = np[i];
+        if (n.z < -0.15) continue;
+        var vz = Math.max(0, Math.min(1, (n.z + 0.15) / 1.15));
+        var isDown = !!down[i];
+
+        if (isDown) {
+          /* outage ring */
+          var pulse = 1 + 0.35 * Math.sin(t * 5);
+          ctx.save();
+          ctx.strokeStyle = 'rgba(245,158,11,' + (0.8 * vz).toFixed(3) + ')';
+          ctx.lineWidth = 1.2;
+          ctx.beginPath(); ctx.arc(n.x, n.y, 9 * pulse * n.k, 0, 6.283); ctx.stroke();
+          ctx.restore();
+          ctx.fillStyle = 'rgba(245,158,11,' + (0.95 * vz).toFixed(3) + ')';
+        } else {
+          ctx.save();
+          ctx.shadowColor = 'rgba(228,16,42,.95)'; ctx.shadowBlur = 10;
+          ctx.fillStyle = 'rgba(255,45,61,' + (0.92 * vz).toFixed(3) + ')';
+          ctx.beginPath(); ctx.arc(n.x, n.y, 2.8 * n.k, 0, 6.283); ctx.fill();
+          ctx.restore();
+          ctx.fillStyle = 'rgba(255,255,255,' + (0.5 * vz).toFixed(3) + ')';
+        }
+        if (!isDown) {
+          ctx.beginPath(); ctx.arc(n.x, n.y, 2.8 * n.k, 0, 6.283); ctx.fill();
+        } else {
+          ctx.beginPath(); ctx.arc(n.x, n.y, 3.2 * n.k, 0, 6.283); ctx.fill();
+        }
+
+        if (vz > 0.45) {
+          ctx.fillStyle = isDown
+            ? 'rgba(245,158,11,' + (0.95 * vz).toFixed(3) + ')'
+            : 'rgba(200,190,192,' + (0.7 * vz).toFixed(3) + ')';
+          ctx.fillText(NODES[i].id, n.x + 8, n.y);
+        }
+      }
+
+      /* --- telemetry --- */
+      var online = 8 - Object.keys(down).length;
+      if (online !== lastOnline || reroutes !== lastReroute) {
+        lastOnline = online; lastReroute = reroutes;
+        elOnline.textContent = online;
+        elReroute.textContent = reroutes;
+        elLoad.textContent = '100%';
+        if (online === 8) {
+          elStatus.className = 'st st--ok';
+          elStatus.innerHTML = '<span class="dot"></span>Nominal';
+        } else {
+          elStatus.className = 'st st--reroute';
+          elStatus.innerHTML = '<span class="dot"></span>Rerouted';
+        }
+      }
+    }
+
+    cv.addEventListener('pointermove', function (e) {
+      var r = cv.getBoundingClientRect();
+      mx = e.clientX - r.left; my = e.clientY - r.top; hasPointer = true;
+    });
+    cv.addEventListener('pointerleave', function () { hasPointer = false; });
+
+    var live = true;
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { live = es[0].isIntersecting; }, { threshold: 0 }).observe(cv);
+    }
+    function loop() { if (live) { rot += 0.0015; t += 0.016; draw(); } requestAnimationFrame(loop); }
+
+    size(); draw();
+    addEventListener('resize', function () { size(); draw(); });
+    /* the reveal transform distorts the first measurement — re-measure once settled */
+    if ('ResizeObserver' in window) new ResizeObserver(function () { size(); draw(); }).observe(cv);
+    if (!reduce) loop();
+  })();
+
+  /* =======================================================================
+     ENQUIRY DIALOG
+     A published page cannot open an SMTP connection, so the form composes
+     the enquiry and hands it to the visitor's own mail client addressed to
+     hello@genesysdcs.com, with a clipboard fallback for webmail users.
+     ======================================================================= */
+  (function enquiry() {
+    var scrim = document.getElementById('scrim');
+    var sheet = document.getElementById('sheet');
+    var form = document.getElementById('enquiry');
+    var sent = document.getElementById('sent');
+    if (!scrim || !form) return;
+
+    var TO = 'hello@genesysdcs.com';
+    var lastFocus = null;
+    var eyebrow = sheet.querySelector('.label');
+    var title = document.getElementById('sheet-title');
+    var sub = document.getElementById('sheet-sub');
+    var formErr = document.getElementById('e-form');
+
+    var FIELDS = [
+      { id: 'f-name', label: 'Name' },
+      { id: 'f-company', label: 'Company' },
+      { id: 'f-email', label: 'Work email' },
+      { id: 'f-msg', label: 'Requirement' }
+    ];
+
+    function fieldOf(input) { return input.closest('.field'); }
+    function valid(input) {
+      var v = input.value.trim();
+      if (!v) return false;
+      if (input.type === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+      return true;
+    }
+    function mark(input) {
+      var ok = valid(input);
+      fieldOf(input).classList.toggle('invalid', !ok);
+      return ok;
+    }
+
+    FIELDS.forEach(function (f) {
+      var el = document.getElementById(f.id);
+      /* validate on blur, never on keystroke */
+      el.addEventListener('blur', function () { if (el.value.trim()) mark(el); });
+      el.addEventListener('input', function () {
+        if (fieldOf(el).classList.contains('invalid') && valid(el)) mark(el);
+        /* once nothing is outstanding, retract the summary too */
+        if (!form.querySelector('.field.invalid')) formErr.style.display = 'none';
+      });
+    });
+
+    function open(intent) {
+      lastFocus = document.activeElement;
+      /* the button that was pressed sets the enquiry type and the framing */
+      if (intent === 'review') {
+        eyebrow.textContent = 'Capability review';
+        title.textContent = 'Book a capability review.';
+        sub.textContent = 'We look at your programme, your team and your controls, and tell you where the gaps are.';
+        document.getElementById('f-type').value = 'Capability review';
+      } else {
+        eyebrow.textContent = 'Start a project';
+        title.textContent = "Tell us what you're building.";
+        sub.textContent = 'A few details so the right engineer answers you, not a mailbox.';
+      }
+      scrim.hidden = false;
+      requestAnimationFrame(function () { scrim.classList.add('open'); });
+      document.body.style.overflow = 'hidden';
+      setTimeout(function () { document.getElementById('f-name').focus(); }, 90);
+    }
+    function close() {
+      scrim.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function () { scrim.hidden = true; }, 320);
+      if (lastFocus) lastFocus.focus();
+    }
+
+    /* every CTA opens the dialog; the mailto href stays as the no-JS fallback */
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
+      var intent = /capability review/i.test(a.textContent) ? 'review' : 'project';
+      a.addEventListener('click', function (e) { e.preventDefault(); open(intent); });
+    });
+
+    document.getElementById('sheet-close').addEventListener('click', close);
+    scrim.addEventListener('mousedown', function (e) { if (e.target === scrim) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (scrim.hidden) return;
+      if (e.key === 'Escape') { close(); return; }
+      if (e.key !== 'Tab') return;
+      /* focus trap */
+      var f = sheet.querySelectorAll('a[href], button, input, select, textarea');
+      var vis = [].filter.call(f, function (el) { return el.offsetParent !== null && !el.disabled; });
+      if (!vis.length) return;
+      var first = vis[0], last = vis[vis.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+
+    function compose() {
+      var g = function (id) { return document.getElementById(id).value.trim(); };
+      /* plain ASCII in the subject — it survives every mail client intact */
+      var subject = 'Enquiry - ' + g('f-type') + ' - ' + g('f-company');
+      var lines = [
+        'ENQUIRY VIA GENESYSDCS.COM',
+        '',
+        'Name:      ' + g('f-name'),
+        'Company:   ' + g('f-company'),
+        'Role:      ' + (g('f-role') || '—'),
+        'Email:     ' + g('f-email'),
+        '',
+        'Enquiry:   ' + g('f-type'),
+        'Stage:     ' + g('f-stage'),
+        'IT load:   ' + (g('f-load') || 'Not stated'),
+        '',
+        'REQUIREMENT',
+        g('f-msg')
+      ];
+      return { subject: subject, body: lines.join('\n') };
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var firstBad = null;
+      FIELDS.forEach(function (f) {
+        var el = document.getElementById(f.id);
+        if (!mark(el) && !firstBad) firstBad = el;
+      });
+      if (firstBad) {
+        formErr.style.display = 'flex';
+        firstBad.focus();
+        return;
+      }
+      formErr.style.display = 'none';
+
+      var m = compose();
+      var href = 'mailto:' + TO +
+        '?subject=' + encodeURIComponent(m.subject) +
+        '&body=' + encodeURIComponent(m.body);
+      var link = document.getElementById('mail-link');
+      link.setAttribute('href', href);
+      document.getElementById('preview').textContent = 'To:      ' + TO + '\nSubject: ' + m.subject + '\n\n' + m.body;
+      form.classList.add('off');
+      sent.classList.add('on');
+      sheet.scrollTop = 0;
+      link.focus();
+    });
+
+    document.getElementById('edit-back').addEventListener('click', function () {
+      sent.classList.remove('on');
+      form.classList.remove('off');
+      document.getElementById('f-name').focus();
+    });
+
+    document.getElementById('copy-btn').addEventListener('click', function () {
+      var txt = document.getElementById('preview').textContent;
+      var flag = document.getElementById('copied');
+      var done = function () {
+        flag.classList.add('on');
+        setTimeout(function () { flag.classList.remove('on'); }, 2200);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).then(done, function () {
+          flag.textContent = 'Select the text above to copy'; done();
+        });
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = txt; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); done(); } catch (err) {
+          flag.textContent = 'Select the text above to copy'; done();
+        }
+        document.body.removeChild(ta);
+      }
+    });
+  })();
+
+  /* ---------- OUR VALUES — each value, and what it costs to hold ---------- */
+  var VALUES = [
+    { k: 'Courage', h: 'Say the number nobody wants to hear.',
+      p: 'The date is the date. When a programme is not going to make it, we say so while there is still time to act — not in the post-mortem. Courage is telling a client their long-lead order is three weeks late before it becomes twelve.',
+      prac: 'In practice: escalation thresholds agreed at kick-off, so bad news has a route and a deadline.' },
+    { k: 'Integrity', h: 'The calculation is right, or it does not ship.',
+      p: 'We author and independently check our own work. If a design does not meet the resilience concept the client sold to their tenant, we do not sign it off because the programme is tight.',
+      prac: 'In practice: independent calculation checks by a second engineer, recorded and traceable.' },
+    { k: 'Innovation', h: 'Remove the error, not just report it.',
+      p: 'Dashboards that display problems are not a solution. We adopt technology — federated BIM, automated reporting, DfMA — where it removes a class of error permanently rather than making it easier to observe.',
+      prac: 'In practice: off-site prefabrication and clash resolution before anyone is on a ladder.' },
+    { k: 'Reliability', h: 'Same format, same day, every week.',
+      p: 'Every stakeholder sees the same schedule, the same cost position and the same risk register, reported identically each week. Reliability is unglamorous and it is what makes a programme governable.',
+      prac: 'In practice: one reporting spine — earned value, look-ahead and risk — to everyone at once.' }
+  ];
+  var vpills = [].slice.call(document.querySelectorAll('.vpill'));
+  var vDetail = document.getElementById('value-detail');
+  function renderValue(i) {
+    var v = VALUES[i];
+    vDetail.innerHTML =
+      '<span class="vk">' + v.k + '</span>' +
+      '<h3>' + v.h + '</h3>' +
+      '<p>' + v.p + '</p>' +
+      '<p class="prac"><svg class="i"><use href="#i-check"/></svg><span>' + v.prac + '</span></p>';
+    if (!reduce) {
+      vDetail.classList.remove('vd-anim');
+      void vDetail.offsetWidth;          /* restart the entrance */
+      vDetail.classList.add('vd-anim');
+    }
+    vpills.forEach(function (b, j) { b.setAttribute('aria-selected', String(i === j)); });
+  }
+  vpills.forEach(function (b, i) {
+    b.addEventListener('click', function () { renderValue(i); });
+    b.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return; e.preventDefault();
+      var n = vpills[(i + d + vpills.length) % vpills.length]; n.focus(); n.click();
+    });
+  });
+  if (vDetail) renderValue(0);
+
+  /* ---------- mission spine draws as you reach it ---------- */
+  (function spine() {
+    var el = document.getElementById('spine'); if (!el) return;
+    if (reduce || !('IntersectionObserver' in window)) { el.classList.add('drawn'); return; }
+    var o = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { el.classList.add('drawn'); o.unobserve(el); } });
+    }, { threshold: 0.35 });
+    o.observe(el);
+  })();
+
+  /* ---------- MEP tabs ---------- */
+  var tabs = [].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (x) {
+        x.setAttribute('aria-selected', String(x === tab));
+        document.getElementById(x.getAttribute('aria-controls')).hidden = (x !== tab);
+      });
+    });
+    tab.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return; e.preventDefault();
+      var n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); n.click();
+    });
+  });
+
+  /* ---------- lifecycle ---------- */
+  var STAGES = [
+    { h: 'Feasibility &amp; concept', p: 'We stress-test the brief before it becomes a budget — site constraints, power availability, resilience concept and the realistic programme duration. The cheapest risk to remove is the one still on paper.',
+      d: ['Capacity and power-availability review', 'Resilience concept options and cost impact', 'Order-of-magnitude programme and budget', 'Early constructability and logistics assessment'] },
+    { h: 'Design &amp; coordination', p: 'Design review, technical calculations and MEP coordination in a federated model. We check what has been drawn against what can be built, maintained and commissioned.',
+      d: ['Design review against employer&rsquo;s requirements', 'Independent calculation checks', 'Federated BIM clash resolution', 'Value engineering with whole-life cost'] },
+    { h: 'Procurement &amp; long lead', p: 'Switchgear, generators and chillers set the critical path long before anyone breaks ground. We build the procurement schedule backwards from energisation and hold it.',
+      d: ['Long-lead register tied to the baseline', 'Technical bid evaluation and levelling', 'Vendor coordination and FAT planning', 'Interface scope-gap analysis between packages'] },
+    { h: 'Construction support', p: 'Site management, quality assurance and project controls — with the reporting spine that keeps budget, schedule and resources visible to every stakeholder at the same time.',
+      d: ['Weekly earned value and look-ahead reporting', 'Quality assurance and inspection regime', 'RFI and technical query turnaround', 'Risk register worked, not archived'] },
+    { h: 'Commissioning &amp; handover', p: 'L1 through L5, with failure-mode scripts written before witness day. Handover includes the data and training the operator actually needs on day one.',
+      d: ['Commissioning strategy and script authoring', 'Integrated systems testing support', 'Load bank and black-start witnessing', 'O&amp;M structure, asset data and operator training'] }
+  ];
+  var steps = [].slice.call(document.querySelectorAll('.step'));
+  var sBody = document.getElementById('stage-body');
+  function renderStage(i) {
+    var s = STAGES[i];
+    sBody.innerHTML = '<div><h3>' + s.h + '</h3><p>' + s.p + '</p></div><ul class="deliver">' +
+      s.d.map(function (x) { return '<li><svg class="i"><use href="#i-check"/></svg>' + x + '</li>'; }).join('') + '</ul>';
+    steps.forEach(function (b, j) { b.setAttribute('aria-selected', String(i === j)); });
+  }
+  steps.forEach(function (b, i) {
+    b.addEventListener('click', function () { renderStage(i); });
+    b.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return; e.preventDefault();
+      var n = steps[(i + d + steps.length) % steps.length]; n.focus(); n.click();
+    });
+  });
+  if (sBody) renderStage(0);
+
+  /* ---------- white space hall ---------- */
+  (function hall() {
+    var cv = document.getElementById('hall-canvas'); if (!cv) return;
+    var ctx = cv.getContext('2d');
+    var track = document.querySelector('.hall-track');
+    var titleEl = document.getElementById('phase-title'), noteEl = document.getElementById('phase-note');
+    var racksEl = document.getElementById('r-racks'), loadEl = document.getElementById('r-load');
+    var btns = [].slice.call(document.querySelectorAll('.phase'));
+
+    var ROWS = 5, PER = 6, RACK_KW = 16;
+    var NAMES = ['A', 'B', 'C', 'D', 'E'];
+    var NOTES = [
+      'First row released. Busway energised, containment closed, controls proven against the sequence of operation.',
+      'Second UPS block on load. Selective tripping verified; generator step-load acceptance witnessed.',
+      'Cooling proven at design day and at part load. CFD assumptions checked against measured airflow.',
+      'Concurrent maintainability demonstrated — each path taken down in turn with no load interruption.',
+      'Full-hall integrated systems test: load banks to 100%, black-start, and the operator handover pack.'
+    ];
+
+    var W = 0, H = 0, dpr = Math.min(devicePixelRatio || 1, 2);
+    var yaw = -0.62, pitch = 0.40, tYaw = yaw, tPitch = pitch;
+    var phase = 0, shown = 1, drag = null, t = 0;
+    var RW = 0.30, RD = 0.62, RH = 1.15, SPAN = 0.84, ROWZ = 1.85;
+    var halfX = ((PER - 1) * SPAN) / 2, z0 = -((ROWS - 1) * ROWZ) / 2;
+    var EDGES = [[0,1],[1,3],[3,2],[2,0],[4,5],[5,7],[7,6],[6,4],[0,4],[1,5],[2,6],[3,7]];
+
+    function size() {
+      var r = cv.getBoundingClientRect();
+      W = r.width; H = r.height;
+      cv.width = W * dpr; cv.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function project(x, y, z, dist, fov) {
+      var cy = Math.cos(yaw), sy = Math.sin(yaw);
+      var x1 = x * cy - z * sy, z1 = x * sy + z * cy;
+      var cp = Math.cos(pitch), sp = Math.sin(pitch);
+      var y1 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
+      var d = Math.max(0.35, z2 + dist), s = fov / d;
+      return [W / 2 + x1 * s, H / 2 - y1 * s + H * 0.16, d];
+    }
+    function corners(cx, cz, h, dist, fov) {
+      var xs = [cx - RW, cx + RW], zs = [cz - RD, cz + RD], ys = [0, h], c = [];
+      for (var i = 0; i < 8; i++) c.push(project(xs[(i >> 2) & 1], ys[(i >> 1) & 1], zs[i & 1], dist, fov));
+      return c;
+    }
+    function hull(ps) {
+      var p = ps.slice().sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; });
+      var cr = function (o, a, b) { return (a[0]-o[0])*(b[1]-o[1]) - (a[1]-o[1])*(b[0]-o[0]); };
+      var lo = [], up = [], i;
+      for (i = 0; i < p.length; i++) { while (lo.length >= 2 && cr(lo[lo.length-2], lo[lo.length-1], p[i]) <= 0) lo.pop(); lo.push(p[i]); }
+      for (i = p.length - 1; i >= 0; i--) { while (up.length >= 2 && cr(up[up.length-2], up[up.length-1], p[i]) <= 0) up.pop(); up.push(p[i]); }
+      lo.pop(); up.pop(); return lo.concat(up);
+    }
+    function draw() {
+      var fov = Math.min(W, H * 1.62) * 0.60, dist = 11.4 - shown * 0.22;
+      ctx.clearRect(0, 0, W, H);
+      var fp = new Path2D(), g, a, b;
+      for (g = -4; g <= 4; g++) { a = project(g*0.78,0,-4.4,dist,fov); b = project(g*0.78,0,4.4,dist,fov); fp.moveTo(a[0],a[1]); fp.lineTo(b[0],b[1]); }
+      for (g = -5; g <= 5; g++) { a = project(-3.12,0,g*0.88,dist,fov); b = project(3.12,0,g*0.88,dist,fov); fp.moveTo(a[0],a[1]); fp.lineTo(b[0],b[1]); }
+      ctx.strokeStyle = 'rgba(255,255,255,.05)'; ctx.lineWidth = 1; ctx.stroke(fp);
+
+      var racks = [], r, k;
+      for (r = 0; r < ROWS; r++) {
+        var z = z0 + r * ROWZ, isLive = r < Math.ceil(shown - 0.001);
+        var grow = Math.max(0, Math.min(1, shown - r));
+        var h = RH * (isLive ? (r === Math.floor(shown - 0.001) ? 0.28 + 0.72 * grow : 1) : 1);
+        for (k = 0; k < PER; k++) racks.push({ c: corners(-halfX + k * SPAN, z, h, dist, fov), live: isLive });
+      }
+      racks.sort(function (p, q) { var dp=0,dq=0,i; for(i=0;i<8;i++){dp+=p.c[i][2];dq+=q.c[i][2];} return dq-dp; });
+
+      for (var n = 0; n < racks.length; n++) {
+        var rk = racks[n], hp = hull(rk.c), e, p1, p2;
+        ctx.beginPath(); ctx.moveTo(hp[0][0], hp[0][1]);
+        for (e = 1; e < hp.length; e++) ctx.lineTo(hp[e][0], hp[e][1]);
+        ctx.closePath();
+        ctx.fillStyle = rk.live ? 'rgba(12,5,8,.95)' : 'rgba(8,7,10,.8)';
+        ctx.fill();
+        var ep = new Path2D();
+        for (e = 0; e < 12; e++) { p1 = rk.c[EDGES[e][0]]; p2 = rk.c[EDGES[e][1]]; ep.moveTo(p1[0],p1[1]); ep.lineTo(p2[0],p2[1]); }
+        ctx.save();
+        if (rk.live) { ctx.strokeStyle = 'rgba(255,120,124,.7)'; ctx.lineWidth = 1; ctx.shadowColor='rgba(228,16,42,.75)'; ctx.shadowBlur=6; }
+        else { ctx.setLineDash([3,4]); ctx.strokeStyle = 'rgba(255,255,255,.15)'; ctx.lineWidth = 1; }
+        ctx.stroke(ep); ctx.restore();
+      }
+      for (r = 0; r < ROWS; r++) {
+        if (r >= Math.ceil(shown - 0.001)) continue;
+        var zr = z0 + r * ROWZ;
+        var b1 = project(-halfX-0.55, RH+0.55, zr, dist, fov), b2 = project(halfX+0.55, RH+0.55, zr, dist, fov);
+        ctx.save();
+        ctx.strokeStyle = 'rgba(228,16,42,' + (0.5 + 0.22 * Math.sin(t*1.4 + r)).toFixed(3) + ')';
+        ctx.lineWidth = 1.6; ctx.shadowColor='rgba(228,16,42,.9)'; ctx.shadowBlur=11;
+        ctx.beginPath(); ctx.moveTo(b1[0],b1[1]); ctx.lineTo(b2[0],b2[1]); ctx.stroke(); ctx.restore();
+      }
+      if (shown > 0.05) {
+        var zEnd = z0 + (Math.ceil(shown - 0.001) - 1) * ROWZ + 0.9, y = RH + 1.0;
+        var q = [project(-halfX-0.8,y,z0-0.9,dist,fov), project(halfX+0.8,y,z0-0.9,dist,fov),
+                 project(halfX+0.8,y,zEnd,dist,fov), project(-halfX-0.8,y,zEnd,dist,fov)];
+        ctx.save(); ctx.setLineDash([5,5]); ctx.strokeStyle='rgba(255,255,255,.16)'; ctx.lineWidth=1;
+        ctx.beginPath(); ctx.moveTo(q[0][0],q[0][1]);
+        for (var m = 1; m < 4; m++) ctx.lineTo(q[m][0],q[m][1]);
+        ctx.closePath(); ctx.stroke(); ctx.restore();
+      }
+    }
+    function setPhase(p, fromScroll) {
+      p = Math.max(0, Math.min(ROWS - 1, p));
+      if (p === phase && fromScroll) return;
+      phase = p;
+      var lr = (phase + 1) * PER;
+      titleEl.textContent = 'Phase ' + (phase + 1) + ' — Row ' + NAMES[phase];
+      noteEl.textContent = NOTES[phase];
+      racksEl.textContent = lr;
+      loadEl.textContent = (lr * RACK_KW) + ' kW';
+      btns.forEach(function (b, i) { b.classList.toggle('live', i <= phase); b.classList.toggle('now', i === phase); });
+    }
+    function onScroll() {
+      if (!track || reduce) return;
+      var r = track.getBoundingClientRect(), span = r.height - innerHeight;
+      if (span <= 0) return;
+      setPhase(Math.round(Math.max(0, Math.min(1, -r.top / span)) * (ROWS - 1)), true);
+    }
+    cv.addEventListener('pointerdown', function (e) {
+      drag = { x: e.clientX, y: e.clientY, yaw: tYaw, pitch: tPitch }; cv.setPointerCapture(e.pointerId);
+    });
+    cv.addEventListener('pointermove', function (e) {
+      if (drag) {
+        tYaw = drag.yaw + (e.clientX - drag.x) * 0.006;
+        tPitch = Math.max(0.10, Math.min(0.85, drag.pitch - (e.clientY - drag.y) * 0.004));
+      } else if (!reduce && hoverable) {
+        var r = cv.getBoundingClientRect();
+        tYaw = -0.62 + ((e.clientX - r.left) / r.width - 0.5) * 0.7;
+        tPitch = 0.40 + (0.5 - (e.clientY - r.top) / r.height) * 0.24;
+      }
+    });
+    ['pointerup','pointercancel'].forEach(function (ev) { cv.addEventListener(ev, function () { drag = null; }); });
+    cv.addEventListener('pointerleave', function () { if (!drag) { tYaw = -0.62; tPitch = 0.40; } });
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () { setPhase(+b.dataset.p, false); if (reduce) { shown = phase + 1; draw(); } });
+    });
+    var live = true;
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { live = es[0].isIntersecting; }, { threshold: 0 }).observe(cv);
+    }
+    function loop() {
+      if (live) {
+        yaw += (tYaw - yaw) * 0.09; pitch += (tPitch - pitch) * 0.09;
+        shown += ((phase + 1) - shown) * 0.08; t += 0.016; draw();
+      }
+      requestAnimationFrame(loop);
+    }
+    size(); setPhase(0, false); draw();
+    addEventListener('resize', function () { size(); draw(); });
+    if (!reduce) { addEventListener('scroll', onScroll, { passive: true }); onScroll(); loop(); }
+  })();
+
+  /* ---------- trend chart ---------- */
+  (function trend() {
+    var cvs = document.getElementById('trend'); if (!cvs) return;
+    var bars = document.querySelectorAll('.bar i');
+    function drawTrend() {
+      var dpr = Math.min(devicePixelRatio || 1, 2);
+      var r = cvs.getBoundingClientRect(), W = r.width, H = r.height;
+      cvs.width = W * dpr; cvs.height = H * dpr;
+      var c = cvs.getContext('2d'); c.setTransform(dpr,0,0,dpr,0,0); c.clearRect(0,0,W,H);
+      var plan = [0,6,13,21,30,39,48,58,67,76,85,93], earn = [0,5,12,20,31,41,50,59,70,79,88,95];
+      var padL = 32, padR = 8, padT = 12, padB = 20, iw = W-padL-padR, ih = H-padT-padB;
+      var X = function (i) { return padL + (i/(plan.length-1))*iw; };
+      var Y = function (v) { return padT + ih - (v/100)*ih; };
+      c.font = '500 9px Inter, system-ui, sans-serif'; c.textBaseline = 'middle';
+      [0,50,100].forEach(function (v) {
+        c.strokeStyle = 'rgba(255,255,255,.08)'; c.lineWidth = 1;
+        c.beginPath(); c.moveTo(padL, Y(v)); c.lineTo(W-padR, Y(v)); c.stroke();
+        c.fillStyle = 'rgba(169,149,152,.9)'; c.textAlign = 'right'; c.fillText(v + '%', padL-7, Y(v));
+      });
+      c.textAlign = 'center'; c.fillStyle = 'rgba(110,91,96,1)';
+      c.fillText('W13', X(0), H-7); c.fillText('W24', X(plan.length-1), H-7);
+      var line = function (data, stroke, dash, fill) {
+        c.save(); c.setLineDash(dash || []);
+        if (fill) {
+          var g = c.createLinearGradient(0, padT, 0, padT+ih);
+          g.addColorStop(0,'rgba(228,16,42,.28)'); g.addColorStop(1,'rgba(228,16,42,0)');
+          c.beginPath(); c.moveTo(X(0), Y(data[0]));
+          data.forEach(function (v,i) { c.lineTo(X(i), Y(v)); });
+          c.lineTo(X(data.length-1), padT+ih); c.lineTo(X(0), padT+ih); c.closePath();
+          c.fillStyle = g; c.fill();
+        }
+        c.beginPath(); c.moveTo(X(0), Y(data[0]));
+        data.forEach(function (v,i) { c.lineTo(X(i), Y(v)); });
+        c.strokeStyle = stroke; c.lineWidth = 1.8; c.lineJoin = 'round'; c.stroke(); c.restore();
+      };
+      line(plan, 'rgba(169,149,152,.7)', [3,3], false);
+      line(earn, '#FF2D3D', null, true);
+      var lx = X(earn.length-1), ly = Y(earn[earn.length-1]);
+      c.save(); c.shadowColor='rgba(228,16,42,.95)'; c.shadowBlur=10;
+      c.fillStyle = '#FF2D3D'; c.beginPath(); c.arc(lx, ly, 3, 0, 6.283); c.fill(); c.restore();
+      c.textAlign = 'left'; c.font = '600 9px Inter, system-ui, sans-serif';
+      c.fillStyle = 'rgba(169,149,152,1)'; c.fillText('PLANNED', padL+4, padT+5);
+      c.fillStyle = '#FF7B7B'; c.fillText('EARNED', padL+54, padT+5);
+    }
+    if ('IntersectionObserver' in window) {
+      var tio = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          bars.forEach(function (b) { b.style.width = b.dataset.w + '%'; });
+          tio.unobserve(e.target);
+        });
+      }, { threshold: 0.3 });
+      tio.observe(cvs);
+    } else { bars.forEach(function (b) { b.style.width = b.dataset.w + '%'; }); }
+    drawTrend();
+    var rt; addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(drawTrend, 140); });
+  })();
+})();
+</script>
+</body>
+</html>
