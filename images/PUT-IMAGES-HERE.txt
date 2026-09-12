@@ -1,9 +1,0 @@
-Save the two photographs here with these exact filenames:
-
-  site-aerial.jpg   - the aerial drone shot of the campus under construction
-  switchroom.jpg    - the LV switchroom / switchgear lineup interior
-
-Until they exist the page shows a neutral labelled plate in their place,
-so nothing looks broken.
-
-JPEG, around 1600px on the long edge, quality ~80 is plenty.

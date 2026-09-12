@@ -58,17 +58,15 @@ markup are the no-JavaScript fallback — update those too.
 
 ## Photographs
 
-Two photographs are referenced by the page. Save them into an `images/` folder
-next to the HTML, with these exact filenames:
-
 | File | Photograph | Appears in |
 |---|---|---|
-| `images/site-aerial.jpg` | Aerial of the campus under construction | High-Stakes Delivery (bleeds off the right edge) |
-| `images/switchroom.jpg` | LV switchroom / switchgear lineup | MEP Engineering Excellence (bleeds off the left edge) |
+| `images/site-aerial.jpg` | Aerial of the campus under construction | High-Stakes Delivery |
+| `images/switchroom.jpg` | LV switchroom / switchgear lineup | MEP Engineering Excellence |
 
-JPEG, roughly 1600px on the long edge, quality ~80.
+Both are 1600x900 progressive JPEG, quality 82, converted down from the
+original PNGs (5.5 MB total -> 0.7 MB, ~87% smaller).
 
-Until those files exist the page shows a neutral labelled plate in their place,
-so nothing renders as a broken image. Both slots are graded into the dark palette
-with a gradient scrim and carry a caption, following the deck's own treatment of
-photography (image bleeding off one edge, copy on the opposite side).
+To swap either one, replace the file keeping the same name and dimensions,
+then commit and push - Vercel redeploys automatically. Both slots are graded
+into the dark palette with a gradient scrim and carry a caption, following the
+deck's treatment of photography.
