@@ -89,9 +89,11 @@
     background:radial-gradient(circle,rgba(42,4,14,.95),transparent 70%)}
 
   /* ===== brand mark (supplied artwork) ===== */
-  .logo{display:block;width:clamp(132px,13vw,158px);aspect-ratio:7.563;
-    background:var(--logo) left center/contain no-repeat}
-  .logo--sm{width:118px}
+  .logo{display:block;width:clamp(180px,18vw,220px);aspect-ratio:7.563;
+    background:var(--logo) left center/contain no-repeat;
+    image-rendering:-webkit-optimize-contrast;
+    image-rendering:crisp-edges}
+  .logo--sm{width:150px}
   .logo-link{display:inline-flex;align-items:center;transition:opacity .25s}
   .logo-link:hover{opacity:.78}
 
@@ -432,28 +434,31 @@
   .vision b{color:var(--text);font-weight:600}
 
   .values-block{display:grid;gap:1rem}
-  .value-pills{display:flex;flex-wrap:wrap;gap:.65rem}
-  .vpill{position:relative;padding:.8rem 1.5rem;border-radius:100px;overflow:hidden;
-    font-size:var(--t-sm);font-weight:650;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--muted);cursor:pointer;isolation:isolate;
-    background:var(--grain),linear-gradient(150deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
-    backdrop-filter:blur(20px) saturate(170%);-webkit-backdrop-filter:blur(20px) saturate(170%);
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.2),inset 0 -1px 0 rgba(0,0,0,.4);
-    transition:color .35s,transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
-  .vpill::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;
-    background:linear-gradient(150deg,rgba(255,255,255,.4),rgba(255,45,61,.35));
-    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
-    -webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
-    mask-composite:exclude;pointer-events:none;z-index:2}
-  /* the fill sweeps in from the left when a value is selected —
-     the value being applied across the work, not a decorative wipe */
-  .vpill i{position:absolute;inset:0;z-index:-1;transform:scaleX(0);transform-origin:left;
-    background:linear-gradient(90deg,var(--crimson),var(--red));
-    transition:transform .55s cubic-bezier(.16,.84,.24,1)}
-  .vpill:hover{color:var(--text);transform:translateY(-2px)}
-  .vpill[aria-selected="true"]{color:#fff;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 12px 34px -14px rgba(228,16,42,.9)}
-  .vpill[aria-selected="true"] i{transform:scaleX(1)}
+  .values-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+    position: relative; border: 2px solid #D61A2B; border-radius: 20px; margin-bottom: 2rem; max-width: 600px; }
+  .values-grid::before { content: ""; position: absolute; top: 50%; left: 0; right: 0; height: 2px;
+    background: #D61A2B; transform: translateY(-50%); }
+  .values-grid::after { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 2px;
+    background: #D61A2B; transform: translateX(-50%); }
+  .vpill { position: relative; padding: 2.5rem; font-size: 1.1rem; font-weight: 700; letter-spacing: .15em;
+    text-transform: uppercase; color: #D61A2B; cursor: pointer; background: transparent; border: none;
+    transition: color .3s, background .3s; display: flex; align-items: center; justify-content: center; z-index: 1; }
+  .vpill:hover { color: #ff4d5e; }
+  .vpill[aria-selected="true"] { color: #fff; background: rgba(214,26,43,0.15); }
+  .vpill[data-v="0"] { grid-area: 1 / 1; border-top-left-radius: 20px; }
+  .vpill[data-v="1"] { grid-area: 1 / 2; border-top-right-radius: 20px; }
+  .vpill[data-v="2"] { grid-area: 2 / 2; border-bottom-right-radius: 20px; }
+  .vpill[data-v="3"] { grid-area: 2 / 1; border-bottom-left-radius: 20px; }
+  .center-pill { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(94, 21, 26, 0.95), rgba(30, 8, 10, 0.98));
+    border: 2px solid #D61A2B; border-radius: 100px; padding: 0.8rem 2rem; color: #fff; font-weight: 700;
+    letter-spacing: .2em; font-size: 1.1rem; z-index: 2; text-align: center; box-shadow: 0 0 20px rgba(214,26,43,0.3); }
+  .vpill.center-pill:hover { color: #fff; box-shadow: 0 0 25px rgba(255, 77, 94, 0.5); }
+  .vpill.center-pill[aria-selected="true"] { background: radial-gradient(circle, rgba(130, 25, 30, 0.95), rgba(50, 10, 15, 0.98)); }
+  @media(max-width:600px){
+    .vpill { padding: 1.5rem 1rem; font-size: 0.9rem; }
+    .center-pill { padding: 0.6rem 1rem; font-size: 0.9rem; }
+  }
   .value-detail{padding:var(--pad);display:grid;gap:.6rem;min-height:172px;align-content:start}
   .value-detail .vk{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
     color:var(--ember);font-weight:650}
@@ -781,43 +786,57 @@
         <p class="reveal" style="--d:60ms;color:var(--muted);max-width:46ch">
           Four commitments that decide how we work. Select one to see what it means on a live programme.
         </p>
-        <div class="value-pills reveal" style="--d:120ms" role="tablist" aria-label="Our values">
-          <button class="vpill" role="tab" aria-selected="true" data-v="0"><i></i>Courage</button>
-          <button class="vpill" role="tab" aria-selected="false" data-v="1"><i></i>Integrity</button>
-          <button class="vpill" role="tab" aria-selected="false" data-v="2"><i></i>Innovation</button>
-          <button class="vpill" role="tab" aria-selected="false" data-v="3"><i></i>Reliability</button>
+        <div class="values-grid reveal" style="--d:120ms" role="tablist" aria-label="Our values">
+          <button class="vpill" role="tab" aria-selected="true" data-v="0">Courage</button>
+          <button class="vpill" role="tab" aria-selected="false" data-v="1">Integrity</button>
+          <button class="vpill" role="tab" aria-selected="false" data-v="2">Innovation</button>
+          <button class="vpill" role="tab" aria-selected="false" data-v="3">Reliability</button>
+          <button class="vpill center-pill" role="tab" aria-selected="false" data-v="4">OUR PEOPLE</button>
         </div>
         <div class="value-detail glass reveal" style="--d:180ms" id="value-detail" role="tabpanel" aria-live="polite"></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHO WE ARE ===== -->
-  <section id="who" class="shell" style="padding-top:0">
+  <!-- ===== WHITE SPACE ===== -->
+  <section id="hall" class="shell">
     <div class="sec-head">
-      <p class="label reveal">Who we are</p>
-      <h2 class="reveal" style="--d:60ms">A specialist engineering and project delivery consultancy for <em>modern data centre infrastructure</em>.</h2>
+      <p class="label reveal">Inside the build</p>
+      <h2 class="reveal" style="--d:60ms">A hall doesn't go live all at once. <em>It goes live in rows.</em></h2>
       <p class="reveal" style="--d:120ms">
-        We support developers, EPC contractors, operators and stakeholders through every stage of the
-        project lifecycle — ensuring certainty in execution, technical excellence and operational efficiency.
+        Each phase is a discrete handover — racks, busway, containment and controls proven together
+        before the next row is released. Drag to orbit; scroll to walk the sequence.
       </p>
     </div>
-    <p class="label reveal" style="margin-bottom:1rem">Core areas</p>
-    <div class="areas reveal" style="--d:60ms">
-      <span class="area">Engineering Excellence</span>
-      <span class="area">Project Management</span>
-      <span class="area">Construction Support</span>
-      <span class="area">Operational Transformation</span>
-      <span class="area">Digital Project Integration</span>
-    </div>
-  </section>
 
-  <section class="shell" style="padding-bottom:0">
-    <div class="stats glass reveal">
-      <div class="stat"><b><span class="count" data-to="4">4</span></b><span>Service pillars</span><small>Engineering, PM, construction, digital</small></div>
-      <div class="stat"><b><span class="count" data-to="5">5</span></b><span>Core areas</span><small>Covering the full project lifecycle</small></div>
-      <div class="stat"><b><span class="count" data-to="6">6</span></b><span>DfMA advantages</span><small>Why we push work off-site</small></div>
-      <div class="stat"><b><span class="count" data-to="100">100</span><span class="suf">%</span></b><span>Programme visibility</span><small>Budget, schedule and resources</small></div>
+    <div class="hall-track">
+      <div class="hall-sticky">
+        <div class="stage glass">
+          <canvas id="hall-canvas" aria-label="Wireframe model of a data hall. Rows of racks energise one phase at a time as you scroll; drag to orbit."></canvas>
+          <div class="stage-hint" aria-hidden="true"><span>Drag <b>orbit</b></span><span>Scroll <b>phase</b></span></div>
+        </div>
+
+        <div class="readout">
+          <div class="rcard glass">
+            <p class="label label--plain">Energisation sequence</p>
+            <h3 id="phase-title">Phase 1 — Row A</h3>
+            <p id="phase-note">First row released. Busway energised, containment closed, controls proven against the sequence of operation.</p>
+            <div class="phases" role="group" aria-label="Select an energisation phase">
+              <button class="phase" data-p="0"><span class="dot"></span><span>Row A — utility intake</span><span class="kw">96 kW</span></button>
+              <button class="phase" data-p="1"><span class="dot"></span><span>Row B — second UPS block</span><span class="kw">192 kW</span></button>
+              <button class="phase" data-p="2"><span class="dot"></span><span>Row C — cooling at design load</span><span class="kw">288 kW</span></button>
+              <button class="phase" data-p="3"><span class="dot"></span><span>Row D — redundancy proven</span><span class="kw">384 kW</span></button>
+              <button class="phase" data-p="4"><span class="dot"></span><span>Row E — full hall IST</span><span class="kw">480 kW</span></button>
+            </div>
+          </div>
+          <div class="rcard glass">
+            <div class="rstat" style="border-top:0;padding-top:0"><span class="k">Racks live</span><span class="v" id="r-racks">6</span></div>
+            <div class="rstat"><span class="k">IT load</span><span class="v" id="r-load">96 kW</span></div>
+            <div class="rstat"><span class="k">Topology</span><span class="v" style="font-size:1rem">2N</span></div>
+            <p class="fine">Illustrative hall — 30 racks at 16 kW across five rows.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -849,44 +868,6 @@
           <p>Processes and controls that survive the second campus, and the tenth.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== HIGH-STAKES DELIVERY ===== -->
-  <section id="stakes" class="shell">
-    <div class="feature">
-      <div class="feature-copy">
-        <div class="sec-head" style="margin-bottom:0">
-          <p class="label reveal">High-stakes delivery</p>
-          <h2 class="reveal" style="--d:60ms">Total visibility over <em>budget, schedule and resources</em>.</h2>
-        </div>
-        <div class="stakes" style="grid-template-columns:1fr">
-          <div class="stake glass reveal">
-            <span class="ico"><svg class="i"><use href="#i-net"/></svg></span>
-            <h3>We bridge operational gaps.</h3>
-            <p>Strategic planning integrated with on-the-ground execution excellence — so the plan
-               and the site agree with each other every week, not at handover.</p>
-          </div>
-          <div class="stake glass reveal" style="--d:80ms">
-            <span class="ico"><svg class="i"><use href="#i-shield"/></svg></span>
-            <h3>We manage what others defer.</h3>
-            <p>Complex, large-scale and time-critical projects delivered through robust risk mitigation,
-               with every exposure quantified and owned.</p>
-          </div>
-        </div>
-      </div>
-
-      <figure class="shot reveal" data-slot="Site photograph — images/site-aerial.jpg"
-              style="--d:120ms">
-        <img src="images/site-aerial.jpg" alt="Aerial view of a data centre campus under construction: structural steel frame with tower cranes, completed hall alongside, site cabins, laydown areas and a transmission pylon."
-             loading="lazy" decoding="async"
-             onerror="this.closest('.shot').classList.add('missing')">
-        <figcaption>
-          <b>On the ground</b>
-          Structural steel, MEP first fix and site logistics progressing in parallel — the point at
-          which schedule, procurement and trade interfaces all have to agree.
-        </figcaption>
-      </figure>
     </div>
   </section>
 
@@ -962,45 +943,69 @@
     </div>
   </section>
 
-  <!-- ===== WHITE SPACE ===== -->
-  <section id="hall" class="shell">
-    <div class="sec-head">
-      <p class="label reveal">Inside the build</p>
-      <h2 class="reveal" style="--d:60ms">A hall doesn't go live all at once. <em>It goes live in rows.</em></h2>
-      <p class="reveal" style="--d:120ms">
-        Each phase is a discrete handover — racks, busway, containment and controls proven together
-        before the next row is released. Drag to orbit; scroll to walk the sequence.
-      </p>
-    </div>
-
-    <div class="hall-track">
-      <div class="hall-sticky">
-        <div class="stage glass">
-          <canvas id="hall-canvas" aria-label="Wireframe model of a data hall. Rows of racks energise one phase at a time as you scroll; drag to orbit."></canvas>
-          <div class="stage-hint" aria-hidden="true"><span>Drag <b>orbit</b></span><span>Scroll <b>phase</b></span></div>
+  <!-- ===== HIGH-STAKES DELIVERY ===== -->
+  <section id="stakes" class="shell">
+    <div class="feature">
+      <div class="feature-copy">
+        <div class="sec-head" style="margin-bottom:0">
+          <p class="label reveal">High-stakes delivery</p>
+          <h2 class="reveal" style="--d:60ms">Total visibility over <em>budget, schedule and resources</em>.</h2>
         </div>
-
-        <div class="readout">
-          <div class="rcard glass">
-            <p class="label label--plain">Energisation sequence</p>
-            <h3 id="phase-title">Phase 1 — Row A</h3>
-            <p id="phase-note">First row released. Busway energised, containment closed, controls proven against the sequence of operation.</p>
-            <div class="phases" role="group" aria-label="Select an energisation phase">
-              <button class="phase" data-p="0"><span class="dot"></span><span>Row A — utility intake</span><span class="kw">96 kW</span></button>
-              <button class="phase" data-p="1"><span class="dot"></span><span>Row B — second UPS block</span><span class="kw">192 kW</span></button>
-              <button class="phase" data-p="2"><span class="dot"></span><span>Row C — cooling at design load</span><span class="kw">288 kW</span></button>
-              <button class="phase" data-p="3"><span class="dot"></span><span>Row D — redundancy proven</span><span class="kw">384 kW</span></button>
-              <button class="phase" data-p="4"><span class="dot"></span><span>Row E — full hall IST</span><span class="kw">480 kW</span></button>
-            </div>
+        <div class="stakes" style="grid-template-columns:1fr">
+          <div class="stake glass reveal">
+            <span class="ico"><svg class="i"><use href="#i-net"/></svg></span>
+            <h3>We bridge operational gaps.</h3>
+            <p>Strategic planning integrated with on-the-ground execution excellence — so the plan
+               and the site agree with each other every week, not at handover.</p>
           </div>
-          <div class="rcard glass">
-            <div class="rstat" style="border-top:0;padding-top:0"><span class="k">Racks live</span><span class="v" id="r-racks">6</span></div>
-            <div class="rstat"><span class="k">IT load</span><span class="v" id="r-load">96 kW</span></div>
-            <div class="rstat"><span class="k">Topology</span><span class="v" style="font-size:1rem">2N</span></div>
-            <p class="fine">Illustrative hall — 30 racks at 16 kW across five rows.</p>
+          <div class="stake glass reveal" style="--d:80ms">
+            <span class="ico"><svg class="i"><use href="#i-shield"/></svg></span>
+            <h3>We manage what others defer.</h3>
+            <p>Complex, large-scale and time-critical projects delivered through robust risk mitigation,
+               with every exposure quantified and owned.</p>
           </div>
         </div>
       </div>
+
+      <figure class="shot reveal" data-slot="Site photograph — images/site-aerial.jpg"
+              style="--d:120ms">
+        <img src="images/site-aerial.jpg" alt="Aerial view of a data centre campus under construction: structural steel frame with tower cranes, completed hall alongside, site cabins, laydown areas and a transmission pylon."
+             loading="lazy" decoding="async"
+             onerror="this.closest('.shot').classList.add('missing')">
+        <figcaption>
+          <b>On the ground</b>
+          Structural steel, MEP first fix and site logistics progressing in parallel — the point at
+          which schedule, procurement and trade interfaces all have to agree.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE ARE ===== -->
+  <section id="who" class="shell" style="padding-top:0">
+    <div class="sec-head">
+      <p class="label reveal">Who we are</p>
+      <h2 class="reveal" style="--d:60ms">A specialist engineering and project delivery consultancy for <em>modern data centre infrastructure</em>.</h2>
+      <p class="reveal" style="--d:120ms">
+        We deliver end-to-end engineering and project solutions for leading data centre operators, EPC contractors and developers — with proven implementation across the full project lifecycle. From design and engineering through execution, commissioning and operations, we work alongside top-tier operators to deliver high-quality infrastructure, technical excellence and operational performance.
+      </p>
+    </div>
+    <p class="label reveal" style="margin-bottom:1rem">Core areas</p>
+    <div class="areas reveal" style="--d:60ms">
+      <span class="area">Engineering Excellence</span>
+      <span class="area">Project Management</span>
+      <span class="area">Construction Support</span>
+      <span class="area">Operational Transformation</span>
+      <span class="area">Digital Project Integration</span>
+    </div>
+  </section>
+
+  <section class="shell" style="padding-bottom:0">
+    <div class="stats glass reveal">
+      <div class="stat"><b><span class="count" data-to="4">4</span></b><span>Service pillars</span><small>Engineering, PM, construction, digital</small></div>
+      <div class="stat"><b><span class="count" data-to="5">5</span></b><span>Core areas</span><small>Covering the full project lifecycle</small></div>
+      <div class="stat"><b><span class="count" data-to="6">6</span></b><span>DfMA advantages</span><small>Why we push work off-site</small></div>
+      <div class="stat"><b><span class="count" data-to="100">100</span><span class="suf">%</span></b><span>Programme visibility</span><small>Budget, schedule and resources</small></div>
     </div>
   </section>
 
@@ -1469,7 +1474,7 @@
 
 <footer>
   <div class="shell foot-in">
-    <span class="logo logo--sm" role="img" aria-label="Genesys DC Solutions"></span>
+    <span class="logo" role="img" aria-label="Genesys DC Solutions"></span>
     <span>Engineering · Project Management · Construction Support · Digital</span>
     <a href="mailto:hello@genesysdcs.com">hello@genesysdcs.com</a>
   </div>
@@ -2029,7 +2034,10 @@
       prac: 'In practice: off-site prefabrication and clash resolution before anyone is on a ladder.' },
     { k: 'Reliability', h: 'Same format, same day, every week.',
       p: 'Every stakeholder sees the same schedule, the same cost position and the same risk register, reported identically each week. Reliability is unglamorous and it is what makes a programme governable.',
-      prac: 'In practice: one reporting spine — earned value, look-ahead and risk — to everyone at once.' }
+      prac: 'In practice: one reporting spine — earned value, look-ahead and risk — to everyone at once.' },
+    { k: 'Our People', h: 'The people behind every project.',
+      p: 'Our team brings together top engineering expertise, quality project experience and a shared commitment to delivering critical infrastructure with clarity and precision.',
+      prac: 'In practice: multidisciplinary teams that stay with your project from initial design through to final handover, ensuring continuity and accountability.' }
   ];
   var vpills = [].slice.call(document.querySelectorAll('.vpill'));
   var vDetail = document.getElementById('value-detail');
@@ -2039,7 +2047,7 @@
       '<span class="vk">' + v.k + '</span>' +
       '<h3>' + v.h + '</h3>' +
       '<p>' + v.p + '</p>' +
-      '<p class="prac"><svg class="i"><use href="#i-check"/></svg><span>' + v.prac + '</span></p>';
+      (v.prac ? '<p class="prac"><svg class="i"><use href="#i-check"/></svg><span>' + v.prac + '</span></p>' : '');
     if (!reduce) {
       vDetail.classList.remove('vd-anim');
       void vDetail.offsetWidth;          /* restart the entrance */
